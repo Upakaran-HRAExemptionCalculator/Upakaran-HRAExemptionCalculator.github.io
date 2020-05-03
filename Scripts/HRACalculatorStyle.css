@@ -41,6 +41,7 @@
 		-moz-background-size: cover;
 		-o-background-size: cover;
 		background-size: cover;
+		font-size: 3.2vw;
 	} 
 
 	#mainBody{
@@ -147,7 +148,7 @@
 	
 	@font-face {
 		  font-family: 'Comic Sans MS';
-		  src: url("./comici.ttf");
+		  src: url("./COMIC.ttf");
 }
 	
 		
