@@ -145,4 +145,9 @@
 		display : none;
 	}
 	
+	@font-face {
+		  font-family: 'Comic Sans MS';
+		  src: url("./comici.ttf");
+}
+	
 		
