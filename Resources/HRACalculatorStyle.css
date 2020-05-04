@@ -1,6 +1,6 @@
 
 	/* Coded by Upakaran Acharyya Chowdhury (upakaran.0407@gmail.com , 9163769466)- for desktop app HRA Exemption Calculator */
-	/* Last modified on 03-MAY-2020 by Upakaran Acharyya Chowdhury. */
+	/* Last modified on 04-MAY-2020 by Upakaran Acharyya Chowdhury. */
 
 	#alertContainer{	
 		display : none;
@@ -41,7 +41,6 @@
 		-moz-background-size: cover;
 		-o-background-size: cover;
 		background-size: cover;
-		
 	} 
 
 	#mainBody{
@@ -145,10 +144,5 @@
 	#PANMessage{
 		display : none;
 	}
-	
-	/**  @font-face {
-		  font-family: 'Comic Sans MS';
-		  src: url("./Comic_final.ttf");
-	} **/
 	
 		

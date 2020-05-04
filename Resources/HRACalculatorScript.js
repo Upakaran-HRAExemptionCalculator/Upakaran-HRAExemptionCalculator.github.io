@@ -1,7 +1,7 @@
 
 
 	/* Coded by Upakaran Acharyya Chowdhury (upakaran.0407@gmail.com , 9163769466)- for desktop app HRA Exemption Calculator */
-	/* Last modified on 03-MAY-2020 by Upakaran Acharyya Chowdhury. */	
+	/* Last modified on 04-MAY-2020 by Upakaran Acharyya Chowdhury. */	
 
 	function hideDispMsg() {
 		
@@ -512,3 +512,10 @@
 		document.getElementById("YourName").value = "";
 		document.getElementById("FY").value = "";
 	}
+	
+	// We listen to the resize event
+	//	window.addEventListener('resize', () => {
+		// We execute the same script as before
+	//	let vh = window.innerHeight * 0.01;
+	//	document.documentElement.style.setProperty('--vh', `${vh}px`);
+	//	});
