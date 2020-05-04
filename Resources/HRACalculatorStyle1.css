@@ -34,9 +34,9 @@
 	body {
 		background: url('../Images/BgImgFinal.jpg') ; 
 	/*	background-image: url('../Images/BgImgFinal.jpg'); */
-		background-repeat: no-repeat; 
+		background-repeat: repeat; 
 		background-attachment: fixed; 
-		background-size: 100% 100%;
+		background-size: 100% 50%;
 		/* no-repeat center center fixed;  */
 	/*	-webkit-background-size: cover;
 		-moz-background-size: cover;
