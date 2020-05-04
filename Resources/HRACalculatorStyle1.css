@@ -34,9 +34,9 @@
 	body {
 		background: url('../Images/BgImgFinal.jpg') ; 
 	/*	background-image: url('../Images/BgImgFinal.jpg'); */
-		background-repeat: repeat; 
+		background-repeat: no-repeat; 
 		background-attachment: fixed; 
-		background-size: 100% 50%;
+		background-size: 100% 100%;
 		/* no-repeat center center fixed;  */
 	/*	-webkit-background-size: cover;
 		-moz-background-size: cover;
@@ -159,3 +159,17 @@
 		h3{
 			font-size : 1.37vw;
 		}
+		
+		.allTextInfo{
+			font-size : 0.5vw;
+		} 
+		
+	/*	.personalTextInfo{
+			
+		}
+		
+		.bulletTextInfo{
+			font-size : 1.5vw;
+		} */
+		
+		
