@@ -48,7 +48,7 @@
 	#mainBody{
 		opacity : 1.0;
 		position: relative;
-		border: 0.5 px dashed maroon;
+		border: 1px dotted maroon;
 		min-width:900px;
 		min-height:400px;
 	}
