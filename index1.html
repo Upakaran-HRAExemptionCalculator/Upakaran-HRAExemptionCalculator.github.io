@@ -12,10 +12,27 @@
 	<script src="./Resources/HRACalculatorScript.js"></script>
 	<script type="text/javascript" src="./Resources/jspdf.min.js"></script>
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+		<meta name="viewport" content="width=screen-width " >
 	
 	<meta charset="utf-8">
     <meta name="Description" CONTENT="Author: Upakaran Acharyya Chowdhury, Illustrator: Upakaran's HRA Calculator, Category: House Rent Allowance Exemption Calculator, Price:  Free, Length: 1 page">
     <meta name="robots" content="index,nofollow">
+	
+	<script>
+			var previousOrientation = window.orientation;
+			var checkOrientation = function(){
+			if(window.orientation !== previousOrientation){
+			previousOrientation = window.orientation;
+			// orientation changed, do your magic here
+			}
+			};
+
+			window.addEventListener("resize", checkOrientation, false);
+			window.addEventListener("orientationchange", checkOrientation, false);
+
+			// (optional) Android doesn't always fire orientationChange on 180 degree turns
+			setInterval(checkOrientation, 2000);
+	</script>
 	
 </head>
 
@@ -43,13 +60,13 @@
 			</div>
 		</div>
 	</div>
-	<div id="bodyContainer" style="padding : 5px; margin : 0px; border : 2px dotted Maroon ; overflow:auto">
-		<h1 style="font-family:Comic Sans MS;color:DARKBLUE; margin-left : 50px; margin-right : 50px; "><i> <u>UPAKARAN's HRA EXEMPTION CALCULATOR</i></u></h1> 
-		<h3 style="font-family:Comic Sans MS;color:DARKBLUE; margin-left : 50px; margin-right : 50px;"><i>This app has been developed to calculate the HRA exemptions that can be availed while filing yearly Income Tax return.</i></h3>
-		<h3 style="font-family:Comic Sans MS;color:NAVY; margin-left : 50px; margin-right : 50px;"><b><i>Please enter the details in the calculator below and click Calculate to get the exemption values.</b></i></h3>
+	<div id="bodyContainer" style="padding : 5px; padding-top: 20px; margin : 0px; border : 2px dotted Maroon ; overflow:auto ; ">
+		<h1 style="font-family:Comic Sans MS;color:DARKBLUE; margin-left : 50px; margin-right : 50px;  "><i> <u>UPAKARAN's HRA EXEMPTION CALCULATOR</i></u></h1> 
+		<h3 style="font-family:Comic Sans MS;color:DARKBLUE; margin-left : 50px; margin-right : 50px; "><i>This app has been developed to calculate the HRA exemptions that can be availed while filing yearly Income Tax return.</i></h3>
+		<h3 style="font-family:Comic Sans MS;color:NAVY; margin-left : 50px; margin-right : 50px; "><b><i>Please enter the details in the calculator below and click Calculate to get the exemption values.</b></i></h3>
 		<form id = "HRAForm" method="post" style = "font-size:1.2vw;">
 			<!-- onsubmit="return false" -->
-			<div style="border: 5px solid MAROON;padding: 50px;margin: 50px;padding-bottom : 30px ; padding-top: 10px">
+			<div style="border: 5px solid MAROON;padding: 50px;margin: 50px;padding-bottom : 30px ; padding-top: 10px ; ">
 				<table style="width:100%" id="table1">
 					<caption>
 						<div style="font-family:Comic Sans MS;color:RED;padding:5px;font-size:1.9vw;margin-bottom:10px;font-weight: bold;" id = "HRA_Calculator"><b>HRA Calculator<b></div>
@@ -221,31 +238,31 @@
 		
 		
 				<div style="text-align: left;align:left;width:90%;padding-left: 50px; font-size:1.2vw;">
-					
-					<span style="margin: 0 auto;font-family:Comic Sans MS;font-weight: bold;" class = "allTextInfo">** <u>Do you want to save a soft copy of your calculated HRA Exemption ? If yes, then follow the below steps !!</u></span>
-					
-							<div style="height:7px;">
-									<br>
-							</div>
-					
-					<span style="margin: 0 auto;font-family:Comic Sans MS;font-weight: bold;" class = "allTextInfo">:-  If you have not already calculated your HRA exemption, enter all the details asked for in the calculator and click Calclate to get HRA exemption.</span>
-					
-							<div style="height:7px;">
-									<br>
-							</div>
-							
-					<span style="margin: 0 auto;font-family:Comic Sans MS;font-weight: bold;" class = "allTextInfo">:- Enter your name and financial year (E.g. - 2019-2020 or 2019-20) for which you are calculating HRA exemption in the below textboxes.</span>
-					
-							<div style="height:7px;">
-									<br>
-							</div>
-					
-					<span style="margin: 0 auto;font-family:Comic Sans MS;font-weight: bold; " class = "allTextInfo">:- Click on Save PDF button to save a soft copy of calculated HRA. A PDF copy will be saved in your browser's default downloads folder.</span>
-					
-							<div style="height:40px;">
-									<br>
-							</div>
-					
+					<div style = "line-height : 0.2 vw;">
+						<span style="margin: 0 auto;font-family:Comic Sans MS;font-weight: bold;" class = "allTextInfo">** <u>Do you want to save a soft copy of your calculated HRA Exemption ? If yes, then follow the below steps !!</u></span>
+						
+								<div style="height:7px;">
+										<br>
+								</div>
+						
+						<span style="margin: 0 auto;font-family:Comic Sans MS;font-weight: bold; line-height : 0.2vw;" class = "allTextInfo">:-  If you have not already calculated your HRA exemption, enter all the details asked for in the calculator and click Calclate to get HRA exemption.</span>
+						
+								<div style="height:7px;">
+										<br>
+								</div>
+								
+						<span style="margin: 0 auto;font-family:Comic Sans MS;font-weight: bold;" class = "allTextInfo">:- Enter your name and financial year (E.g. - 2019-2020 or 2019-20) for which you are calculating HRA exemption in the below textboxes.</span>
+						
+								<div style="height:7px;">
+										<br>
+								</div>
+						
+						<span style="margin: 0 auto;font-family:Comic Sans MS;font-weight: bold; " class = "allTextInfo">:- Click on Save PDF button to save a soft copy of calculated HRA. A PDF copy will be saved in your browser's default downloads folder.</span>
+						
+								<div style="height:40px;">
+										<br>
+								</div>
+					</div>
 					
 					<input id="forName" type="radio" name="forName" value="forName"/>
 					<label for="forName" class="bullets" ></label>
