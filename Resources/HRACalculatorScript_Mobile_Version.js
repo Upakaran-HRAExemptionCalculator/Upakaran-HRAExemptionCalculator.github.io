@@ -26,6 +26,7 @@
 	function sleep(delay) {
 		var start = new Date().getTime();
 		while (new Date().getTime() < start + delay);
+		return;
 	}
 
 	function checkInputsAndAlert(){
@@ -523,3 +524,100 @@
 	
 	const vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 	const vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+	
+	
+	//	var previousOrientation = window.orientation;
+	
+		//	var checkOrientationAndAdjust = function(){
+		//	if(window.orientation !== previousOrientation){
+		//	previousOrientation = window.orientation;
+			// orientation changed, do your magic here
+		//	}
+		//	};
+
+		//	window.addEventListener("resize", checkOrientationAndAdjust, false);
+			window.addEventListener("orientationchange", doOnOrientationChange, true);
+
+			// (optional) Android doesn't always fire orientationChange on 180 degree turns
+		//	setInterval(checkOrientationAndAdjust, 2000);
+		
+		function checkOrientationAndAdjust(){
+			
+			
+			var query = window.matchMedia("(orientation:portrait)");
+			
+			console.log("Device held " + (query.matches ? "vertically" : "horizontally"));
+			
+			if(query.matches == true){			  // landscape mode	
+				console.log("this is in landscape mode");
+				return;
+			}
+			
+			else if(query.matches == false){			  // portrait mode	
+				console.log("this is in portrait mode");
+				return;
+			}
+			
+			
+		}
+		
+		function checkOrientationAndAdjustOnReload(){
+			
+			
+			var query = window.matchMedia("(orientation:portrait)");
+			
+			console.log("Device held " + (query.matches ? "vertically" : "horizontally"));
+			
+			if(query.matches == true){			  // portrait mode	
+				console.log("this is in portrait mode");
+				return;
+			}
+			
+			else if(query.matches == false){			  // landscape mode	
+				console.log("this is in landscape mode");
+				return;
+			}	
+			
+		}
+		
+		
+		function doOnOrientationChange(){
+					switch(window.orientation) 
+				{  
+					case -90:
+					case 90:
+								console.log("landscape");
+								console.log("device held horizontally.");
+								document.getElementsByName("firstHeading")[0].style.fontSize = 'xx-large';
+								document.getElementsByName("secondHeading")[0].style.fontSize = 'large';
+								document.getElementsByName("thirdHeading")[0].style.fontSize = 'large';
+								document.getElementsByName("tips")[0].style.fontSize = 'medium';
+								document.getElementById("downloadGuide").style.fontSize = 'medium';
+								document.getElementById("tryDownload").style.fontSize = 'medium';
+								document.getElementsByName("YourName")[0].style.fontSize = 'large';
+								document.getElementsByName("YourName")[0].style.width = '300px';
+								document.getElementsByName("FY")[0].style.fontSize = 'large';
+								document.getElementsByName("FY")[0].style.width = '180px';
+								document.getElementsByName("generatePDF")[0].style.fontSize = 'large';
+								document.getElementsByName("developerInfo")[0].style.fontSize = 'smaller';
+								document.getElementsByName("footer")[0].style.fontSize = 'small';
+					break; 
+					default:
+								console.log("portrait");
+								console.log("device held vertically.");
+								document.getElementsByName("firstHeading")[0].style.fontSize = 'larger';
+								document.getElementsByName("secondHeading")[0].style.fontSize = 'small';
+								document.getElementsByName("thirdHeading")[0].style.fontSize = 'small';
+								document.getElementsByName("tips")[0].style.fontSize = 'x-small';
+								document.getElementById("downloadGuide").style.fontSize = 'x-small';
+								document.getElementById("tryDownload").style.fontSize = 'x-small';
+								document.getElementsByName("YourName")[0].style.fontSize = 'medium';
+								document.getElementsByName("YourName")[0].style.width = '260px';
+								document.getElementsByName("FY")[0].style.fontSize = 'medium';
+								document.getElementsByName("FY")[0].style.width = '160px';
+								document.getElementsByName("generatePDF")[0].style.fontSize = 'medium';
+								document.getElementsByName("developerInfo")[0].style.fontSize = 'x-small';
+								document.getElementsByName("footer")[0].style.fontSize = 'xx-small';
+					break; 
+				}
+			}
