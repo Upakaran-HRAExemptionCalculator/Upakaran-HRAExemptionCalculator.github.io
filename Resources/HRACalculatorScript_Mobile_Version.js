@@ -535,7 +535,7 @@
 		//	}
 		//	};
 
-			window.addEventListener("resize", doOnOrientationChange, false);
+			//window.addEventListener("resize", doOnOrientationChange, false);
 			window.addEventListener("orientationchange", doOnOrientationChange, false);
 
 			// (optional) Android doesn't always fire orientationChange on 180 degree turns
@@ -582,6 +582,7 @@
 		
 		
 		function doOnOrientationChange(){
+			console.log("doOnOrientationChange called")
 					switch(window.orientation) 
 				{  
 					case -90:
@@ -621,3 +622,10 @@
 					break; 
 				}
 			}
+			
+			
+			
+			
+			
+			
+			
