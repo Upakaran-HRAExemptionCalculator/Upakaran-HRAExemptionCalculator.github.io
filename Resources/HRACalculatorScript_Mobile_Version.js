@@ -536,7 +536,7 @@
 		//	};
 
 			//window.addEventListener("resize", doOnOrientationChange, false);
-			window.addEventListener("orientationchange", doOnOrientationChange, false);
+			//window.addEventListener("orientationchange", doOnOrientationChange, false);
 
 			// (optional) Android doesn't always fire orientationChange on 180 degree turns
 		//	setInterval(checkOrientationAndAdjust, 2000);
