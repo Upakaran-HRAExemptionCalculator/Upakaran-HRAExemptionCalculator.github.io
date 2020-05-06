@@ -449,9 +449,9 @@
 			
 			doc.text(15,85, 'House Rent Allowance component of salary : Rs '+HRA); //X,Y are the position
 			
-			doc.text(15,95, 'Actual rent paid to landlord in rupees : Rs '+Rent); //X,Y are the position
+			doc.text(15,95, 'Actual rent paid to landlord : Rs '+Rent); //X,Y are the position
 			
-			doc.text(15,105, 'City type Metro/Non-Metro : '+cityType); //X,Y are the position
+			doc.text(15,105, 'City/Town type Metro/Non-Metro : '+cityType); //X,Y are the position
 			
 			doc.line(15, 110, 195, 110); // horizontal line
 			
