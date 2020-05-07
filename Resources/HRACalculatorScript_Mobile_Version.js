@@ -693,7 +693,7 @@
 				//			console.log(gamma);
 				//			console.log(absolute);
 							
-							if(alpha <=45 || alpha >= 315){
+							if(window.innerHeight > window.innerWidth){
 								currentOrientation = "portrait";
 							}
 							else{
