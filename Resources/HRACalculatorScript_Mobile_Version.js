@@ -739,9 +739,9 @@
 							//	document.getElementById("downloadGuide").style.fontSize = 'medium';
 							//	document.getElementById("tryDownload").style.fontSize = 'medium';
 								
-								document.getElementsByName("tips")[0].style.fontSize = 'x-small';
-								document.getElementById("downloadGuide").style.fontSize = 'x-small';
-								document.getElementById("tryDownload").style.fontSize = 'x-small';
+								document.getElementsByName("tips")[0].style.fontSize = 'xx-small';
+								document.getElementById("downloadGuide").style.fontSize = 'xx-small';
+								document.getElementById("tryDownload").style.fontSize = 'xx-small';
 								
 								document.getElementsByName("YourName")[0].style.fontSize = 'large';
 								document.getElementsByName("YourName")[0].style.width = '300px';
@@ -749,7 +749,7 @@
 								document.getElementsByName("FY")[0].style.width = '180px';
 								document.getElementsByName("generatePDF")[0].style.fontSize = 'large';
 							//	document.getElementsByName("developerInfo")[0].style.fontSize = 'smaller';
-								document.getElementsByName("developerInfo")[0].style.fontSize = 'xx-small';
+								document.getElementsByName("developerInfo")[0].style.fontSize = 'xxx-small';
 								document.getElementsByName("footer")[0].style.fontSize = 'smaller';
 								prevOrientation = "landscape";
 								
