@@ -603,7 +603,9 @@
 								document.getElementsByName("FY")[0].style.fontSize = 'large';
 								document.getElementsByName("FY")[0].style.width = '180px';
 								document.getElementsByName("generatePDF")[0].style.fontSize = 'large';
+								
 								document.getElementsByName("developerInfo")[0].style.fontSize = 'smaller';
+								
 								document.getElementsByName("footer")[0].style.fontSize = 'smaller';
 					break; 
 					default:
@@ -620,7 +622,9 @@
 								document.getElementsByName("FY")[0].style.fontSize = 'medium';
 								document.getElementsByName("FY")[0].style.width = '160px';
 								document.getElementsByName("generatePDF")[0].style.fontSize = 'medium';
+								
 								document.getElementsByName("developerInfo")[0].style.fontSize = 'x-small';
+								
 								document.getElementsByName("footer")[0].style.fontSize = 'xx-small';
 					break; 
 				}
@@ -727,7 +731,10 @@
 								document.getElementsByName("FY")[0].style.fontSize = 'large';
 								document.getElementsByName("FY")[0].style.width = '180px';
 								document.getElementsByName("generatePDF")[0].style.fontSize = 'large';
+								document.getElementsByName("developerInfo")[0].style.dislpay = 'none';
 								document.getElementsByName("developerInfo")[0].style.fontSize = 'smaller';
+								sleep(500);
+								document.getElementsByName("developerInfo")[0].style.display = 'block';
 								document.getElementsByName("footer")[0].style.fontSize = 'smaller';
 								break; 
 								
@@ -747,7 +754,10 @@
 								document.getElementsByName("FY")[0].style.fontSize = 'medium';
 								document.getElementsByName("FY")[0].style.width = '160px';
 								document.getElementsByName("generatePDF")[0].style.fontSize = 'medium';
+								document.getElementsByName("developerInfo")[0].style.dislpay = 'none';
 								document.getElementsByName("developerInfo")[0].style.fontSize = 'x-small';
+								sleep(500);
+								document.getElementsByName("developerInfo")[0].style.display = 'block';
 								document.getElementsByName("footer")[0].style.fontSize = 'xx-small';
 								break; 
 							}
