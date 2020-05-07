@@ -779,9 +779,9 @@
 							//	document.getElementById("downloadGuide").style.fontSize = 'x-small';
 							//	document.getElementById("tryDownload").style.fontSize = 'x-small';
 								
-								document.getElementsByName("tips")[0].style.fontSize = 'large';
-								document.getElementById("downloadGuide").style.fontSize = 'large';
-								document.getElementById("tryDownload").style.fontSize = 'large';
+								document.getElementsByName("tips")[0].style.fontSize = 'larger';
+								document.getElementById("downloadGuide").style.fontSize = 'larger';
+								document.getElementById("tryDownload").style.fontSize = 'larger';
 								
 								document.getElementsByName("YourName")[0].style.fontSize = 'medium';
 								document.getElementsByName("YourName")[0].style.width = '260px';
