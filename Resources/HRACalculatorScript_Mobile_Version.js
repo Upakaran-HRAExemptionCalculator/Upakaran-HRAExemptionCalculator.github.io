@@ -535,7 +535,7 @@
 		//	}
 		//	};
 
-		//	window.addEventListener("resize", doOnOrientationChange, false);
+			window.addEventListener("resize", handleOrientation, false);
 		//	window.addEventListener("orientationchange", doOnOrientationChange, false);
 		//	screen.orientation.addEventListener("change", doOnScreenOrientationChange , false );
 			
@@ -584,7 +584,7 @@
 		
 		
 		function checkOrientationAndAdjustOnLoad(){
-			console.log("doOnOrientationChange called");
+			console.log("checkOrientationAndAdjustOnLoad called");
 			
 					switch(window.orientation) 
 				{  
@@ -675,20 +675,20 @@
 			
 			
 			
-			window.addEventListener("deviceorientation", handleOrientation, true);
+		//	window.addEventListener("deviceorientation", handleOrientation, true);
 			
 				function handleOrientation(event) {
 					
 					console.log("handleOrientation called");
 					
 					//		var absolute = event.absolute;
-							var alpha    = event.alpha;
+					//		var alpha    = event.alpha;
 					//		var beta     = event.beta;
 					//		var gamma    = event.gamma;
 							var currentOrientation = "";
 
 				// Do stuff with the new orientation data
-							console.log(alpha);
+				//			console.log(alpha);
 				//			console.log(beta);
 				//			console.log(gamma);
 				//			console.log(absolute);
