@@ -707,15 +707,15 @@
 							}
 							
 							
-							switch(currentOrientation) 
+						//	switch(currentOrientation) 
 							
-						//	switch(window.orientation)   
+							switch(window.orientation)   
 							
 							{  
-							//	case -90:
-							//	case 90:
+								case -90:
+								case 90:
 							
-							case "landscape" :
+						//	case "landscape" :
 								
 								console.log("landscape");
 								console.log("device held horizontally.");
@@ -731,12 +731,14 @@
 								document.getElementsByName("FY")[0].style.fontSize = 'large';
 								document.getElementsByName("FY")[0].style.width = '180px';
 								document.getElementsByName("generatePDF")[0].style.fontSize = 'large';
-							//	document.getElementsByName("developerInfo")[0].style.fontSize = 'smaller';
-								document.getElementsByName("developerInfo")[0].style.fontSize = 'x-small';
+								document.getElementsByName("developerInfo")[0].style.fontSize = 'smaller';
+							//	document.getElementsByName("developerInfo")[0].style.fontSize = 'x-small';
 								document.getElementsByName("footer")[0].style.fontSize = 'smaller';
 								break; 
 								
-							case "portrait" :
+						//	case "portrait" :
+						
+								default :
 								
 								console.log("portrait");
 								console.log("device held vertically.");
@@ -752,8 +754,8 @@
 								document.getElementsByName("FY")[0].style.fontSize = 'medium';
 								document.getElementsByName("FY")[0].style.width = '160px';
 								document.getElementsByName("generatePDF")[0].style.fontSize = 'medium';
-							//	document.getElementsByName("developerInfo")[0].style.fontSize = 'x-small';
-								document.getElementsByName("developerInfo")[0].style.fontSize = 'medium';
+								document.getElementsByName("developerInfo")[0].style.fontSize = 'x-small';
+							//	document.getElementsByName("developerInfo")[0].style.fontSize = 'medium';
 								document.getElementsByName("footer")[0].style.fontSize = 'xx-small';
 								break; 
 							}
