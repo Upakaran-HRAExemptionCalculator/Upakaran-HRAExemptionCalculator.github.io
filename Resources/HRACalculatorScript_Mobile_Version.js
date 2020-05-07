@@ -693,11 +693,11 @@
 				//			console.log(gamma);
 				//			console.log(absolute);
 							
-							if(alpha >= -45 && alpha <=45){
-								currentOrientation = "landscape";
+							if(alpha <=45 || alpha >= 315){
+								currentOrientation = "portrait";
 							}
 							else{
-								currentOrientation = "portrait";
+								currentOrientation = "landscape";
 							}
 							switch(currentOrientation) 
 							
