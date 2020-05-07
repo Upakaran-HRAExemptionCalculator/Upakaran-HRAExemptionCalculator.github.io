@@ -798,9 +798,9 @@
 							if(currentOrientation != prevOrientation && currentOrientation.includes("landscape") && orientationOnLastLoad.includes("landscape")){
 								console.log("portrait");
 								console.log("device held vertically.");
-								document.getElementsByName("firstHeading")[0].style.fontSize = '80%';
-								document.getElementsByName("secondHeading")[0].style.fontSize = 'xxx-large';
-								document.getElementsByName("thirdHeading")[0].style.fontSize = 'xxx-large';
+								document.getElementsByName("firstHeading")[0].style.fontSize = '250%';
+								document.getElementsByName("secondHeading")[0].style.fontSize = '200%';
+								document.getElementsByName("thirdHeading")[0].style.fontSize = '200%';
 							
 							//	document.getElementsByName("tips")[0].style.fontSize = 'x-small';
 							//	document.getElementById("downloadGuide").style.fontSize = 'x-small';
