@@ -620,7 +620,7 @@
 								document.getElementsByName("FY")[0].style.width = '180px';
 								document.getElementsByName("generatePDF")[0].style.fontSize = 'large';
 								
-								document.getElementsByName("developerInfo")[0].style.fontSize = 'small';
+								document.getElementsByName("developerInfo")[0].style.fontSize = 'medium';
 								
 								document.getElementsByName("footer")[0].style.fontSize = 'smaller';
 					break; 
