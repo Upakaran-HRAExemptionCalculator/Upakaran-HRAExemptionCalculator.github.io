@@ -235,7 +235,7 @@
 		alertContainer.style.display = 'none';
 		console.log("Alert box is now hidden.");
 		document.getElementById("bodyContainer").style.display = 'block';
-		document.body.style.backgroundImage  = "url('./Images/BgImgFinal.jpg')";
+		document.body.style.backgroundImage  = "url('./Images/BgImgFinal_mobile_version.jpg')";
 		return;	
 	}
 	
