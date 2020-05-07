@@ -535,7 +535,7 @@
 		//	}
 		//	};
 
-		//	window.addEventListener("resize", handleOrientation, false);
+			window.addEventListener("resize", handleOrientation, false);
 		//	window.addEventListener("orientationchange", doOnOrientationChange, false);
 		//	screen.orientation.addEventListener("change", doOnScreenOrientationChange , false );
 			
@@ -675,9 +675,9 @@
 			
 			
 			
-			window.addEventListener("deviceorientation", handleOrientation, false);
+		//	window.addEventListener("deviceorientation", handleOrientation, false);
 			
-				function handleOrientation(event) {
+				function handleOrientation() {
 					
 					console.log("handleOrientation called");
 					
@@ -695,20 +695,27 @@
 							
 							if(window.innerHeight > window.innerWidth){
 								currentOrientation = "portrait";
+								alert("portrait");
 							}
 							else{
 								currentOrientation = "landscape";
+								alert("landscape");
 							}
-						//	switch(currentOrientation) 
 							
-							switch(window.orientation)   
+							
+							switch(currentOrientation) 
+							
+						//	switch(window.orientation)   
 							
 							{  
-								case -90:
-								case 90:
+							//	case -90:
+							//	case 90:
+							
+							case "landscape" :
 								
 								console.log("landscape");
 								console.log("device held horizontally.");
+								alert("device held horizontally.");
 								document.getElementsByName("firstHeading")[0].style.fontSize = 'xx-large';
 								document.getElementsByName("secondHeading")[0].style.fontSize = 'large';
 								document.getElementsByName("thirdHeading")[0].style.fontSize = 'large';
@@ -724,10 +731,11 @@
 								document.getElementsByName("footer")[0].style.fontSize = 'smaller';
 								break; 
 								
-								default:
+							case "portrait" :
 								
 								console.log("portrait");
 								console.log("device held vertically.");
+								alert("device held vertically.");
 								document.getElementsByName("firstHeading")[0].style.fontSize = 'larger';
 								document.getElementsByName("secondHeading")[0].style.fontSize = 'small';
 								document.getElementsByName("thirdHeading")[0].style.fontSize = 'small';
