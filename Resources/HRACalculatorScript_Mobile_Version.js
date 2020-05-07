@@ -591,9 +591,9 @@
 					case 90:
 								console.log("landscape");
 								console.log("device held horizontally.");
-								document.getElementsByName("firstHeading")[0].style.fontSize = 'xx-large';
-								document.getElementsByName("secondHeading")[0].style.fontSize = 'large';
-								document.getElementsByName("thirdHeading")[0].style.fontSize = 'large';
+								document.getElementsByName("firstHeading")[0].style.fontSize = 'xxx-large';
+								document.getElementsByName("secondHeading")[0].style.fontSize = 'x-large';
+								document.getElementsByName("thirdHeading")[0].style.fontSize = 'x-large';
 								document.getElementsByName("tips")[0].style.fontSize = 'medium';
 								document.getElementById("downloadGuide").style.fontSize = 'medium';
 								document.getElementById("tryDownload").style.fontSize = 'medium';
@@ -603,7 +603,7 @@
 								document.getElementsByName("FY")[0].style.width = '180px';
 								document.getElementsByName("generatePDF")[0].style.fontSize = 'large';
 								document.getElementsByName("developerInfo")[0].style.fontSize = 'smaller';
-								document.getElementsByName("footer")[0].style.fontSize = 'small';
+								document.getElementsByName("footer")[0].style.fontSize = 'smaller';
 					break; 
 					default:
 								console.log("portrait");
@@ -680,9 +680,9 @@
 					
 					console.log("handleOrientation called");
 					
-							var absolute = event.absolute;
-							var alpha    = event.alpha;
-							var beta     = event.beta;
+						//	var absolute = event.absolute;
+						//	var alpha    = event.alpha;
+						//	var beta     = event.beta;
 							var gamma    = event.gamma;
 
 				// Do stuff with the new orientation data
@@ -696,9 +696,9 @@
 								case 90:
 											console.log("landscape");
 											console.log("device held horizontally.");
-											document.getElementsByName("firstHeading")[0].style.fontSize = 'xx-large';
-											document.getElementsByName("secondHeading")[0].style.fontSize = 'large';
-											document.getElementsByName("thirdHeading")[0].style.fontSize = 'large';
+											document.getElementsByName("firstHeading")[0].style.fontSize = 'xxx-large';
+											document.getElementsByName("secondHeading")[0].style.fontSize = 'x-large';
+											document.getElementsByName("thirdHeading")[0].style.fontSize = 'x-large';
 											document.getElementsByName("tips")[0].style.fontSize = 'medium';
 											document.getElementById("downloadGuide").style.fontSize = 'medium';
 											document.getElementById("tryDownload").style.fontSize = 'medium';
@@ -708,7 +708,7 @@
 											document.getElementsByName("FY")[0].style.width = '180px';
 											document.getElementsByName("generatePDF")[0].style.fontSize = 'large';
 											document.getElementsByName("developerInfo")[0].style.fontSize = 'smaller';
-											document.getElementsByName("footer")[0].style.fontSize = 'small';
+											document.getElementsByName("footer")[0].style.fontSize = 'smaller';
 								break; 
 								default:
 											console.log("portrait");
