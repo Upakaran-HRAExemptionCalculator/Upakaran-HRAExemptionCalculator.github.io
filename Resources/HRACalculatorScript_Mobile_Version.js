@@ -585,6 +585,7 @@
 		
 		function doOnOrientationChange(){
 			console.log("doOnOrientationChange called");
+			alert("doOnOrientationChange called");
 					switch(window.orientation) 
 				{  
 					case -90:
@@ -677,7 +678,7 @@
 			window.addEventListener("deviceorientation", handleOrientation, true);
 			
 				function handleOrientation(event) {
-					
+					alert("handleOrientation called");
 					console.log("handleOrientation called");
 					
 							var absolute = event.absolute;
