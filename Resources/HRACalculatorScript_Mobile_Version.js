@@ -744,7 +744,7 @@
 								document.getElementsByName("FY")[0].style.width = '180px';
 								document.getElementsByName("generatePDF")[0].style.fontSize = 'large';
 							//	document.getElementsByName("developerInfo")[0].style.fontSize = 'smaller';
-								document.getElementsByName("developerInfo")[0].style.fontSize = 'x-small';
+								document.getElementsByName("developerInfo")[0].style.fontSize = 'xx-small';
 								document.getElementsByName("footer")[0].style.fontSize = 'smaller';
 								prevOrientation = "landscape";
 								
@@ -770,7 +770,7 @@
 								document.getElementsByName("FY")[0].style.width = '160px';
 								document.getElementsByName("generatePDF")[0].style.fontSize = 'medium';
 							//	document.getElementsByName("developerInfo")[0].style.fontSize = 'x-small';
-								document.getElementsByName("developerInfo")[0].style.fontSize = 'medium';
+								document.getElementsByName("developerInfo")[0].style.fontSize = 'small';
 								document.getElementsByName("footer")[0].style.fontSize = 'xx-small';
 								prevOrientation = "portrait";
 								
