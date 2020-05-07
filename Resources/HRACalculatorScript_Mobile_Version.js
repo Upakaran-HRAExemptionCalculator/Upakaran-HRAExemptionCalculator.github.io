@@ -819,7 +819,7 @@
 								
 							//	document.getElementsByName("developerInfo")[0].style.fontSize = 'x-small';
 								document.getElementsByName("developerInfo")[0].style.fontSize = 'medium';
-								document.getElementsByName("footer")[0].style.fontSize = '2.5vh';
+								document.getElementsByName("footer")[0].style.fontSize = 'x-large';
 							}
 							
 											
