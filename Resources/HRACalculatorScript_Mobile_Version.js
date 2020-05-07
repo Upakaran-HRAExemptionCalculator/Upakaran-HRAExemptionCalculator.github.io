@@ -535,7 +535,7 @@
 		//	}
 		//	};
 
-			window.addEventListener("resize", handleOrientation, false);
+		//	window.addEventListener("resize", handleOrientation, false);
 		//	window.addEventListener("orientationchange", doOnOrientationChange, false);
 		//	screen.orientation.addEventListener("change", doOnScreenOrientationChange , false );
 			
@@ -695,11 +695,11 @@
 							
 							if(window.innerHeight > window.innerWidth){
 								currentOrientation = "portrait";
-								alert("portrait");
+							//	alert("portrait");
 							}
 							else{
 								currentOrientation = "landscape";
-								alert("landscape");
+							//	alert("landscape");
 							}
 							
 							
@@ -715,7 +715,7 @@
 								
 								console.log("landscape");
 								console.log("device held horizontally.");
-								alert("device held horizontally.");
+							//	alert("device held horizontally.");
 								document.getElementsByName("firstHeading")[0].style.fontSize = 'xx-large';
 								document.getElementsByName("secondHeading")[0].style.fontSize = 'large';
 								document.getElementsByName("thirdHeading")[0].style.fontSize = 'large';
@@ -735,7 +735,7 @@
 								
 								console.log("portrait");
 								console.log("device held vertically.");
-								alert("device held vertically.");
+							//	alert("device held vertically.");
 								document.getElementsByName("firstHeading")[0].style.fontSize = 'larger';
 								document.getElementsByName("secondHeading")[0].style.fontSize = 'small';
 								document.getElementsByName("thirdHeading")[0].style.fontSize = 'small';
