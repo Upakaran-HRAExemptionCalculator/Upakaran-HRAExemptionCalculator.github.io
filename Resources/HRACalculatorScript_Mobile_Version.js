@@ -1,7 +1,7 @@
 
 
 	/* Coded by Upakaran Acharyya Chowdhury (upakaran.0407@gmail.com , 9163769466)- for desktop app HRA Exemption Calculator */
-	/* Last modified on 04-MAY-2020 by Upakaran Acharyya Chowdhury. */	
+	/* Last modified on 07-MAY-2020 by Upakaran Acharyya Chowdhury. */	
 
 	function hideDispMsg() {
 		
@@ -537,7 +537,8 @@
 
 		//	window.addEventListener("resize", doOnOrientationChange, false);
 		//	window.addEventListener("orientationchange", doOnOrientationChange, false);
-			screen.orientation.addEventListener("change", doOnScreenOrientationChange , false );
+		//	screen.orientation.addEventListener("change", doOnScreenOrientationChange , false );
+			
 			
 			// (optional) Android doesn't always fire orientationChange on 180 degree turns
 		//	setInterval(checkOrientationAndAdjust, 2000);
@@ -583,7 +584,7 @@
 		
 		
 		function doOnOrientationChange(){
-			console.log("doOnOrientationChange called")
+			console.log("doOnOrientationChange called");
 					switch(window.orientation) 
 				{  
 					case -90:
@@ -670,6 +671,64 @@
 								document.getElementsByName("footer")[0].style.fontSize = 'xx-small';
 							}
 			}
+			
+			
+			
+			window.addEventListener("deviceorientation", handleOrientation, true);
+			
+				function handleOrientation(event) {
+					
+					console.log("handleOrientation called");
+					
+							var absolute = event.absolute;
+							var alpha    = event.alpha;
+							var beta     = event.beta;
+							var gamma    = event.gamma;
+
+				// Do stuff with the new orientation data
+							console.log(alpha);
+							console.log(beta);
+							console.log(gamma);
+							console.log(absolute);
+							switch(gamma) 
+							{  
+								case -90:
+								case 90:
+											console.log("landscape");
+											console.log("device held horizontally.");
+											document.getElementsByName("firstHeading")[0].style.fontSize = 'xx-large';
+											document.getElementsByName("secondHeading")[0].style.fontSize = 'large';
+											document.getElementsByName("thirdHeading")[0].style.fontSize = 'large';
+											document.getElementsByName("tips")[0].style.fontSize = 'medium';
+											document.getElementById("downloadGuide").style.fontSize = 'medium';
+											document.getElementById("tryDownload").style.fontSize = 'medium';
+											document.getElementsByName("YourName")[0].style.fontSize = 'large';
+											document.getElementsByName("YourName")[0].style.width = '300px';
+											document.getElementsByName("FY")[0].style.fontSize = 'large';
+											document.getElementsByName("FY")[0].style.width = '180px';
+											document.getElementsByName("generatePDF")[0].style.fontSize = 'large';
+											document.getElementsByName("developerInfo")[0].style.fontSize = 'smaller';
+											document.getElementsByName("footer")[0].style.fontSize = 'small';
+								break; 
+								default:
+											console.log("portrait");
+											console.log("device held vertically.");
+											document.getElementsByName("firstHeading")[0].style.fontSize = 'larger';
+											document.getElementsByName("secondHeading")[0].style.fontSize = 'small';
+											document.getElementsByName("thirdHeading")[0].style.fontSize = 'small';
+											document.getElementsByName("tips")[0].style.fontSize = 'x-small';
+											document.getElementById("downloadGuide").style.fontSize = 'x-small';
+											document.getElementById("tryDownload").style.fontSize = 'x-small';
+											document.getElementsByName("YourName")[0].style.fontSize = 'medium';
+											document.getElementsByName("YourName")[0].style.width = '260px';
+											document.getElementsByName("FY")[0].style.fontSize = 'medium';
+											document.getElementsByName("FY")[0].style.width = '160px';
+											document.getElementsByName("generatePDF")[0].style.fontSize = 'medium';
+											document.getElementsByName("developerInfo")[0].style.fontSize = 'x-small';
+											document.getElementsByName("footer")[0].style.fontSize = 'xx-small';
+								break; 
+							}
+				}
 			
 			
 			
