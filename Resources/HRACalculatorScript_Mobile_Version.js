@@ -688,24 +688,24 @@
 							var currentOrientation = "";
 
 				// Do stuff with the new orientation data
-							console.log(alpha);
+				//			console.log(alpha);
 							console.log(beta);
-							console.log(gamma);
-							console.log(absolute);
+				//			console.log(gamma);
+				//			console.log(absolute);
 							
 							if(beta >= -45 && beta<=45){
-								currentOrientation = "portrait";
-							}
-							else{
 								currentOrientation = "landscape";
 							}
-						//	switch(currentOrientation) 
+							else{
+								currentOrientation = "portrait";
+							}
+							switch(currentOrientation) 
 							
-							switch(window.orientation)  
+						//	switch(window.orientation)  
 							
 							{  
-								case -90:
-								case 90:
+								case "landscape" :
+								
 								
 										console.log("landscape");
 										console.log("device held horizontally from handleOrientation.");
@@ -724,7 +724,7 @@
 										document.getElementsByName("footer")[0].style.fontSize = 'smaller';
 								break; 
 								
-								default:
+								case "portrait" :
 								
 										console.log("portrait");
 										console.log("device held vertically.");
