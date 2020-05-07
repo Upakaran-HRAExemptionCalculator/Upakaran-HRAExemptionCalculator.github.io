@@ -512,6 +512,7 @@
 	function ResetNameAndFY(){
 		document.getElementById("YourName").value = "";
 		document.getElementById("FY").value = "";
+		alert(prevOrientation);
 	}
 	
 	// We listen to the resize event
@@ -522,8 +523,8 @@
 	//	});
 	
 	
-	const vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-	const vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+	// const vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+	// const vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 	
 	
 	//	var previousOrientation = window.orientation;
@@ -583,8 +584,20 @@
 		}
 		
 		
+		var prevOrientation = "";
+		
 		function checkOrientationAndAdjustOnLoad(){
 			console.log("checkOrientationAndAdjustOnLoad called");
+			
+			
+					if(window.innerHeight > window.innerWidth){
+								prevOrientation = "portrait";
+							//	alert("portrait");
+							}
+							else{
+								prevOrientation = "landscape";
+							//	alert("landscape");
+							}
 			
 					switch(window.orientation) 
 				{  
@@ -709,11 +722,10 @@
 							
 						//	switch(currentOrientation) 
 							
-							switch(window.orientation)   
-							
+						//	switch(window.orientation)   
+							if(currentOrientation != prevOrientation && currentOrientation.includes("landscape"))
 							{  
-								case -90:
-								case 90:
+								
 							
 						//	case "landscape" :
 								
@@ -731,14 +743,17 @@
 								document.getElementsByName("FY")[0].style.fontSize = 'large';
 								document.getElementsByName("FY")[0].style.width = '180px';
 								document.getElementsByName("generatePDF")[0].style.fontSize = 'large';
-								document.getElementsByName("developerInfo")[0].style.fontSize = 'smaller';
-							//	document.getElementsByName("developerInfo")[0].style.fontSize = 'x-small';
+							//	document.getElementsByName("developerInfo")[0].style.fontSize = 'smaller';
+								document.getElementsByName("developerInfo")[0].style.fontSize = 'x-small';
 								document.getElementsByName("footer")[0].style.fontSize = 'smaller';
-								break; 
+								prevOrientation = "landscape";
 								
+								
+							}	
 						//	case "portrait" :
 						
-								default :
+							if(currentOrientation != prevOrientation && currentOrientation.includes("portrait"))
+							{		
 								
 								console.log("portrait");
 								console.log("device held vertically.");
@@ -754,10 +769,11 @@
 								document.getElementsByName("FY")[0].style.fontSize = 'medium';
 								document.getElementsByName("FY")[0].style.width = '160px';
 								document.getElementsByName("generatePDF")[0].style.fontSize = 'medium';
-								document.getElementsByName("developerInfo")[0].style.fontSize = 'x-small';
-							//	document.getElementsByName("developerInfo")[0].style.fontSize = 'medium';
+							//	document.getElementsByName("developerInfo")[0].style.fontSize = 'x-small';
+								document.getElementsByName("developerInfo")[0].style.fontSize = 'medium';
 								document.getElementsByName("footer")[0].style.fontSize = 'xx-small';
-								break; 
+								prevOrientation = "portrait";
+								
 							}
 				}
 			
