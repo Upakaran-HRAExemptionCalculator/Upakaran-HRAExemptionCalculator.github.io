@@ -699,9 +699,13 @@
 							else{
 								currentOrientation = "landscape";
 							}
-							switch(currentOrientation) 
+						//	switch(currentOrientation) 
+							
+							switch(window.orientation)  
+							
 							{  
-								case "landscape" :
+								case -90:
+								case 90:
 								
 										console.log("landscape");
 										console.log("device held horizontally from handleOrientation.");
@@ -720,7 +724,7 @@
 										document.getElementsByName("footer")[0].style.fontSize = 'smaller';
 								break; 
 								
-								case "portrait" :
+								default:
 								
 										console.log("portrait");
 										console.log("device held vertically.");
