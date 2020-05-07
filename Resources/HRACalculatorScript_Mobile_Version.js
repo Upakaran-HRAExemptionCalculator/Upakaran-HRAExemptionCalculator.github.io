@@ -681,19 +681,19 @@
 					
 					console.log("handleOrientation called");
 					
-							var absolute = event.absolute;
+					//		var absolute = event.absolute;
 							var alpha    = event.alpha;
-							var beta     = event.beta;
-							var gamma    = event.gamma;
+					//		var beta     = event.beta;
+					//		var gamma    = event.gamma;
 							var currentOrientation = "";
 
 				// Do stuff with the new orientation data
-				//			console.log(alpha);
-							console.log(beta);
+							console.log(alpha);
+				//			console.log(beta);
 				//			console.log(gamma);
 				//			console.log(absolute);
 							
-							if(beta >= -45 && beta<=45){
+							if(alpha >= -45 && alpha <=45){
 								currentOrientation = "landscape";
 							}
 							else{
