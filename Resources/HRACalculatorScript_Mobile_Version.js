@@ -799,9 +799,9 @@
 								console.log("portrait");
 								console.log("device held vertically.");
 								alert(check);
-								document.getElementsByName("firstHeading")[0].style.fontSize = '30px';
-								document.getElementsByName("secondHeading")[0].style.fontSize = '20px';
-								document.getElementsByName("thirdHeading")[0].style.fontSize = '20px';
+								document.getElementsByName("firstHeading")[0].style.fontSize = '6vh';
+								document.getElementsByName("secondHeading")[0].style.fontSize = '4vh';
+								document.getElementsByName("thirdHeading")[0].style.fontSize = '4vh';
 							
 							//	document.getElementsByName("tips")[0].style.fontSize = 'x-small';
 							//	document.getElementById("downloadGuide").style.fontSize = 'x-small';
@@ -819,7 +819,7 @@
 								
 							//	document.getElementsByName("developerInfo")[0].style.fontSize = 'x-small';
 								document.getElementsByName("developerInfo")[0].style.fontSize = 'medium';
-								document.getElementsByName("footer")[0].style.fontSize = '13px';
+								document.getElementsByName("footer")[0].style.fontSize = '2.5vh';
 							}
 							
 											
