@@ -585,6 +585,7 @@
 		
 		
 		var prevOrientation = "";
+		var orientationOnLastLoad = "";
 		
 		function checkOrientationAndAdjustOnLoad(){
 			console.log("checkOrientationAndAdjustOnLoad called");
@@ -592,10 +593,12 @@
 			
 					if(window.innerHeight > window.innerWidth){
 								prevOrientation = "portrait";
+								orientationOnLastLoad = "portrait";
 							//	alert("portrait");
 							}
 							else{
 								prevOrientation = "landscape";
+								orientationOnLastLoad = "landscape";
 							//	alert("landscape");
 							}
 			
@@ -703,35 +706,20 @@
 					//		var beta     = event.beta;
 					//		var gamma    = event.gamma;
 							var currentOrientation = "";
-
-				// Do stuff with the new orientation data
-				//			console.log(alpha);
-				//			console.log(beta);
-				//			console.log(gamma);
-				//			console.log(absolute);
 							
 							if(window.innerHeight > window.innerWidth){
 								currentOrientation = "portrait";
-							//	alert("portrait");
 							}
 							else{
 								currentOrientation = "landscape";
-							//	alert("landscape");
-							}
-							
-							
+							}			
 						//	switch(currentOrientation) 
-							
 						//	switch(window.orientation)   
-							if(currentOrientation != prevOrientation && currentOrientation.includes("landscape"))
-							{  
-								
-							
-						//	case "landscape" :
+							if(currentOrientation != prevOrientation && currentOrientation.includes("landscape") && orientationOnLastLoad.includes("portrait"))
+							{ 
 								
 								console.log("landscape");
 								console.log("device held horizontally.");
-							//	alert("device held horizontally.");
 								document.getElementsByName("firstHeading")[0].style.fontSize = 'xx-large';
 								document.getElementsByName("secondHeading")[0].style.fontSize = 'large';
 								document.getElementsByName("thirdHeading")[0].style.fontSize = 'large';
@@ -749,20 +737,19 @@
 								document.getElementsByName("FY")[0].style.width = '180px';
 								document.getElementsByName("generatePDF")[0].style.fontSize = 'large';
 							//	document.getElementsByName("developerInfo")[0].style.fontSize = 'smaller';
-								document.getElementsByName("developerInfo")[0].style.fontSize = 'xxx-small';
+								document.getElementsByName("developerInfo")[0].style.fontSize = document.getElementsByName("tips")[0].style.fontSize;
 								document.getElementsByName("footer")[0].style.fontSize = 'smaller';
 								prevOrientation = "landscape";
 								
 								
 							}	
-						//	case "portrait" :
 						
-							if(currentOrientation != prevOrientation && currentOrientation.includes("portrait"))
+						
+							if(currentOrientation != prevOrientation && currentOrientation.includes("portrait") && orientationOnLastLoad.includes("portrait"))
 							{		
 								
 								console.log("portrait");
 								console.log("device held vertically.");
-							//	alert("device held vertically.");
 								document.getElementsByName("firstHeading")[0].style.fontSize = 'larger';
 								document.getElementsByName("secondHeading")[0].style.fontSize = 'small';
 								document.getElementsByName("thirdHeading")[0].style.fontSize = 'small';
@@ -780,6 +767,7 @@
 								prevOrientation = "portrait";
 								
 							}
+											
 				}
 			
 			
