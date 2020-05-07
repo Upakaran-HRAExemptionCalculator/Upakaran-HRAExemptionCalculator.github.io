@@ -591,9 +591,9 @@
 					case 90:
 								console.log("landscape");
 								console.log("device held horizontally.");
-								document.getElementsByName("firstHeading")[0].style.fontSize = 'xxx-large';
-								document.getElementsByName("secondHeading")[0].style.fontSize = 'x-large';
-								document.getElementsByName("thirdHeading")[0].style.fontSize = 'x-large';
+								document.getElementsByName("firstHeading")[0].style.fontSize = 'xx-large';
+								document.getElementsByName("secondHeading")[0].style.fontSize = 'large';
+								document.getElementsByName("thirdHeading")[0].style.fontSize = 'large';
 								document.getElementsByName("tips")[0].style.fontSize = 'medium';
 								document.getElementById("downloadGuide").style.fontSize = 'medium';
 								document.getElementById("tryDownload").style.fontSize = 'medium';
@@ -680,9 +680,9 @@
 					
 					console.log("handleOrientation called");
 					
-						//	var absolute = event.absolute;
-						//	var alpha    = event.alpha;
-						//	var beta     = event.beta;
+							var absolute = event.absolute;
+							var alpha    = event.alpha;
+							var beta     = event.beta;
 							var gamma    = event.gamma;
 
 				// Do stuff with the new orientation data
@@ -690,15 +690,15 @@
 							console.log(beta);
 							console.log(gamma);
 							console.log(absolute);
-							switch(gamma) 
+							switch(beta) 
 							{  
 								case -90:
 								case 90:
 											console.log("landscape");
-											console.log("device held horizontally.");
-											document.getElementsByName("firstHeading")[0].style.fontSize = 'xxx-large';
-											document.getElementsByName("secondHeading")[0].style.fontSize = 'x-large';
-											document.getElementsByName("thirdHeading")[0].style.fontSize = 'x-large';
+											console.log("device held horizontally from handleOrientation.");
+											document.getElementsByName("firstHeading")[0].style.fontSize = 'xx-large';
+											document.getElementsByName("secondHeading")[0].style.fontSize = 'large';
+											document.getElementsByName("thirdHeading")[0].style.fontSize = 'large';
 											document.getElementsByName("tips")[0].style.fontSize = 'medium';
 											document.getElementById("downloadGuide").style.fontSize = 'medium';
 											document.getElementById("tryDownload").style.fontSize = 'medium';
@@ -712,7 +712,7 @@
 								break; 
 								default:
 											console.log("portrait");
-											console.log("device held vertically.");
+											console.log("device held vertically from handleOrientation.");
 											document.getElementsByName("firstHeading")[0].style.fontSize = 'larger';
 											document.getElementsByName("secondHeading")[0].style.fontSize = 'small';
 											document.getElementsByName("thirdHeading")[0].style.fontSize = 'small';
