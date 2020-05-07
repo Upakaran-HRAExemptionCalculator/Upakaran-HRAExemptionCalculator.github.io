@@ -675,7 +675,7 @@
 			
 			
 			
-		//	window.addEventListener("deviceorientation", handleOrientation, true);
+			window.addEventListener("deviceorientation", handleOrientation, true);
 			
 				function handleOrientation(event) {
 					
@@ -685,16 +685,24 @@
 							var alpha    = event.alpha;
 							var beta     = event.beta;
 							var gamma    = event.gamma;
+							var currentOrientation = "";
 
 				// Do stuff with the new orientation data
 							console.log(alpha);
 							console.log(beta);
 							console.log(gamma);
 							console.log(absolute);
-							switch(beta) 
+							
+							if(beta >= -45 && beta<=45){
+								currentOrientation = "portrait";
+							}
+							else{
+								currentOrientation = "landscape";
+							}
+							switch(currentOrientation) 
 							{  
-								case -90:
-								case 90:
+								case "landscape" :
+								
 										console.log("landscape");
 										console.log("device held horizontally from handleOrientation.");
 										document.getElementsByName("firstHeading")[0].style.fontSize = 'xx-large';
@@ -711,7 +719,9 @@
 										document.getElementsByName("developerInfo")[0].style.fontSize = 'smaller';
 										document.getElementsByName("footer")[0].style.fontSize = 'smaller';
 								break; 
-								default:
+								
+								case "portrait" :
+								
 										console.log("portrait");
 										console.log("device held vertically.");
 										document.getElementsByName("firstHeading")[0].style.fontSize = 'larger';
