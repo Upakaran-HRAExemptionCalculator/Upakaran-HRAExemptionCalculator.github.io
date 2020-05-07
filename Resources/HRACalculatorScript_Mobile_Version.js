@@ -745,7 +745,7 @@
 							}	
 						
 						
-							if(currentOrientation != prevOrientation && currentOrientation.includes("portrait") && orientationOnLastLoad.includes("portrait"))
+				/**			if(currentOrientation != prevOrientation && currentOrientation.includes("portrait") && orientationOnLastLoad.includes("portrait"))
 							{		
 								
 								console.log("portrait");
@@ -766,7 +766,7 @@
 								document.getElementsByName("footer")[0].style.fontSize = 'xx-small';
 								prevOrientation = "portrait";
 								
-							}
+							} **/
 							
 							if(currentOrientation != prevOrientation && currentOrientation.includes("portrait") && orientationOnLastLoad.includes("landscape")){
 								console.log("portrait");
