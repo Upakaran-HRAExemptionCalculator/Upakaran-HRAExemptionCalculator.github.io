@@ -695,7 +695,7 @@
 			
 			
 			
-			window.addEventListener("deviceorientation", handleOrientation, false);
+		//	window.addEventListener("deviceorientation", handleOrientation, false);
 			
 				function handleOrientation() {
 					
