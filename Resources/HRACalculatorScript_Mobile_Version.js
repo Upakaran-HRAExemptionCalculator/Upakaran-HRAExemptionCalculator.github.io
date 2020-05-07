@@ -512,7 +512,7 @@
 	function ResetNameAndFY(){
 		document.getElementById("YourName").value = "";
 		document.getElementById("FY").value = "";
-		alert(prevOrientation);
+		
 	}
 	
 	// We listen to the resize event
@@ -792,6 +792,33 @@
 							//	document.getElementsByName("developerInfo")[0].style.fontSize = 'x-small';
 								document.getElementsByName("developerInfo")[0].style.fontSize = 'medium';
 								document.getElementsByName("footer")[0].style.fontSize = 'xx-small';
+							}
+							
+							
+							if(currentOrientation != prevOrientation && currentOrientation.includes("landscape") && orientationOnLastLoad.includes("landscape")){
+								console.log("portrait");
+								console.log("device held vertically.");
+								document.getElementsByName("firstHeading")[0].style.fontSize = 'xx-large';
+								document.getElementsByName("secondHeading")[0].style.fontSize = 'large';
+								document.getElementsByName("thirdHeading")[0].style.fontSize = 'large';
+							
+							//	document.getElementsByName("tips")[0].style.fontSize = 'x-small';
+							//	document.getElementById("downloadGuide").style.fontSize = 'x-small';
+							//	document.getElementById("tryDownload").style.fontSize = 'x-small';
+								
+								document.getElementsByName("tips")[0].style.fontSize = 'larger';
+								document.getElementById("downloadGuide").style.fontSize = 'larger';
+								document.getElementById("tryDownload").style.fontSize = 'larger';
+								
+								document.getElementsByName("YourName")[0].style.fontSize = 'medium';
+								document.getElementsByName("YourName")[0].style.width = '260px';
+								document.getElementsByName("FY")[0].style.fontSize = 'medium';
+								document.getElementsByName("FY")[0].style.width = '160px';
+								document.getElementsByName("generatePDF")[0].style.fontSize = 'large';
+								
+							//	document.getElementsByName("developerInfo")[0].style.fontSize = 'x-small';
+								document.getElementsByName("developerInfo")[0].style.fontSize = 'medium';
+								document.getElementsByName("footer")[0].style.fontSize = 'smaller';
 							}
 							
 											
