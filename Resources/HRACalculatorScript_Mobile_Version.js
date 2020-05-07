@@ -620,7 +620,7 @@
 								document.getElementsByName("FY")[0].style.width = '180px';
 								document.getElementsByName("generatePDF")[0].style.fontSize = 'large';
 								
-								document.getElementsByName("developerInfo")[0].style.fontSize = 'smaller';
+								document.getElementsByName("developerInfo")[0].style.fontSize = 'small';
 								
 								document.getElementsByName("footer")[0].style.fontSize = 'smaller';
 					break; 
@@ -737,7 +737,7 @@
 								document.getElementsByName("FY")[0].style.width = '180px';
 								document.getElementsByName("generatePDF")[0].style.fontSize = 'large';
 							//	document.getElementsByName("developerInfo")[0].style.fontSize = 'smaller';
-								document.getElementsByName("developerInfo")[0].style.fontSize = document.getElementsByName("tips")[0].style.fontSize;
+								document.getElementsByName("developerInfo")[0].style.fontSize = 'xx-small';
 								document.getElementsByName("footer")[0].style.fontSize = 'smaller';
 								prevOrientation = "landscape";
 								
@@ -767,6 +767,27 @@
 								prevOrientation = "portrait";
 								
 							}
+							
+							if(currentOrientation != prevOrientation && currentOrientation.includes("portrait") && orientationOnLastLoad.includes("landscape")){
+								console.log("portrait");
+								console.log("device held vertically.");
+								document.getElementsByName("firstHeading")[0].style.fontSize = 'larger';
+								document.getElementsByName("secondHeading")[0].style.fontSize = 'small';
+								document.getElementsByName("thirdHeading")[0].style.fontSize = 'small';
+								document.getElementsByName("tips")[0].style.fontSize = 'x-small';
+								document.getElementById("downloadGuide").style.fontSize = 'x-small';
+								document.getElementById("tryDownload").style.fontSize = 'x-small';
+								document.getElementsByName("YourName")[0].style.fontSize = 'medium';
+								document.getElementsByName("YourName")[0].style.width = '260px';
+								document.getElementsByName("FY")[0].style.fontSize = 'medium';
+								document.getElementsByName("FY")[0].style.width = '160px';
+								document.getElementsByName("generatePDF")[0].style.fontSize = 'medium';
+								
+								document.getElementsByName("developerInfo")[0].style.fontSize = 'x-small';
+								
+								document.getElementsByName("footer")[0].style.fontSize = 'xx-small';
+							}
+							
 											
 				}
 			
