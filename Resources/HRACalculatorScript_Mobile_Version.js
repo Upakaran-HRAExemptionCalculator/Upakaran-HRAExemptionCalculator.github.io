@@ -606,7 +606,7 @@
 				{  
 					case -90:
 					case 90:	
-								alert(window.orientation);
+								
 								console.log("landscape");
 								console.log("device held horizontally.");
 								document.getElementsByName("firstHeading")[0].style.fontSize = 'xx-large';
@@ -626,7 +626,7 @@
 								document.getElementsByName("footer")[0].style.fontSize = 'smaller';
 					break; 
 					default:
-								alert(window.orientation);
+								
 								console.log("portrait");
 								console.log("device held vertically.");
 								document.getElementsByName("firstHeading")[0].style.fontSize = 'larger';
