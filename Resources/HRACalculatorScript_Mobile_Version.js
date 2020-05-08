@@ -612,16 +612,16 @@
 								document.getElementsByName("firstHeading")[0].style.fontSize =  '4.5vw'  // 'xx-large';
 								document.getElementsByName("secondHeading")[0].style.fontSize = '3.5vw'  // 'large';
 								document.getElementsByName("thirdHeading")[0].style.fontSize =  '3.5vw'  // 'large';
-								document.getElementsByName("tips")[0].style.fontSize =  '2.75vw'  // 'medium';
-								document.getElementById("downloadGuide").style.fontSize =  '2.75vw'  // 'medium';
-								document.getElementById("tryDownload").style.fontSize =  '2.75vw'  // 'medium';
+								document.getElementsByName("tips")[0].style.fontSize =  '2.6vw'  // 'medium';
+								document.getElementById("downloadGuide").style.fontSize =  '2.6vw'  // 'medium';
+								document.getElementById("tryDownload").style.fontSize =  '2.6vw'  // 'medium';
 								document.getElementsByName("YourName")[0].style.fontSize = 'large';
 								document.getElementsByName("YourName")[0].style.width = '300px';
 								document.getElementsByName("FY")[0].style.fontSize = 'large';
 								document.getElementsByName("FY")[0].style.width = '180px';
 								document.getElementsByName("generatePDF")[0].style.fontSize = 'large';
 								
-								document.getElementsByName("developerInfo")[0].style.fontSize =  '2.5vw'// 'medium';
+								document.getElementsByName("developerInfo")[0].style.fontSize =  '2.4vw'// 'medium';
 								
 								document.getElementsByName("footer")[0].style.fontSize = '2vw' // 'smaller';
 					break; 
@@ -632,16 +632,16 @@
 								document.getElementsByName("firstHeading")[0].style.fontSize = '4.5vw' // 'larger';
 								document.getElementsByName("secondHeading")[0].style.fontSize = '3.5vw' // 'small';
 								document.getElementsByName("thirdHeading")[0].style.fontSize = '3.5vw'  // 'small';
-								document.getElementsByName("tips")[0].style.fontSize = '2.75vw'  // 'x-small';
-								document.getElementById("downloadGuide").style.fontSize =  '2.75vw'  //'x-small';
-								document.getElementById("tryDownload").style.fontSize =  '2.75vw'  // 'x-small';
+								document.getElementsByName("tips")[0].style.fontSize = '2.6vw'  // 'x-small';
+								document.getElementById("downloadGuide").style.fontSize =  '2.6vw'  //'x-small';
+								document.getElementById("tryDownload").style.fontSize =  '2.6vw'  // 'x-small';
 								document.getElementsByName("YourName")[0].style.fontSize =      'medium';
 								document.getElementsByName("YourName")[0].style.width = '260px';
 								document.getElementsByName("FY")[0].style.fontSize = 'medium';
 								document.getElementsByName("FY")[0].style.width = '160px';
 								document.getElementsByName("generatePDF")[0].style.fontSize = 'medium';
 								
-								document.getElementsByName("developerInfo")[0].style.fontSize = '2.5vw'// 'x-small';
+								document.getElementsByName("developerInfo")[0].style.fontSize = '2.4vw'// 'x-small';
 								
 								document.getElementsByName("footer")[0].style.fontSize = '2vw' // 'xx-small';
 					break; 
