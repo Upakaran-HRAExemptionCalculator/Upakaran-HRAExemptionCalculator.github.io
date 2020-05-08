@@ -795,7 +795,7 @@
 						if(currentOrientation != previousOrientation && currentOrientation.includes("landscape")  && orientationOnLastLoad.includes("landscape")){
 								console.log("landscape");
 								console.log("device held horizontally.");
-								alert("device held horizontally.");
+							//	alert("device held horizontally.");
 								document.getElementsByName("firstHeading")[0].style.fontSize = 'xx-large';
 								document.getElementsByName("secondHeading")[0].style.fontSize = 'large';
 								document.getElementsByName("thirdHeading")[0].style.fontSize = 'large';
