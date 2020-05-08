@@ -691,7 +691,7 @@
 			
 			
 			
-			window.addEventListener("deviceorientation", handleOrientation, false);
+		//	window.addEventListener("deviceorientation", handleOrientation, false);
 			
 				function handleOrientation() {
 					
@@ -731,7 +731,7 @@
 								document.getElementsByName("developerInfo")[0].style.fontSize = 'medium';
 								document.getElementsByName("footer")[0].style.fontSize = 'smaller';
 								previousOrientation = "landscape";
-								break;
+								
 						}
 
 						
@@ -752,7 +752,7 @@
 								document.getElementsByName("developerInfo")[0].style.fontSize = 'x-small';
 								document.getElementsByName("footer")[0].style.fontSize = 'xx-small';
 								previousOrientation = "portrait";
-								break;
+								
 						}
 												
 				}
