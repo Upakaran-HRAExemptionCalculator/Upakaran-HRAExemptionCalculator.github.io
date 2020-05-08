@@ -584,7 +584,7 @@
 		}
 		
 		
-		var prevOrientation = "";
+		var previousOrientation = "";
 		var orientationOnLastLoad = "";
 		
 		function checkOrientationAndAdjustOnLoad(){
@@ -592,14 +592,10 @@
 			
 			
 					if(window.innerHeight > window.innerWidth){
-								prevOrientation = "portrait";
-								orientationOnLastLoad = "portrait";
-							//	alert("portrait");
+								previousOrientation = "portrait";
 							}
 							else{
-								prevOrientation = "landscape";
-								orientationOnLastLoad = "landscape";
-							//	alert("landscape");
+								previousOrientation = "landscape";
 							}
 			
 					switch(window.orientation) 
@@ -652,7 +648,7 @@
 			function doOnScreenOrientationChange(){
 			console.log("doOnScreenOrientationChange called");
 			
-						var orientation = screen.orientation.type;
+						var orientation = screen.orientation.type;  // use this in next try
 						
 						if(orientation.includes("landscape"))
 							{
@@ -695,7 +691,7 @@
 			
 			
 			
-		//	window.addEventListener("deviceorientation", handleOrientation, false);
+			window.addEventListener("deviceorientation", handleOrientation, false);
 			
 				function handleOrientation() {
 					
@@ -715,39 +711,31 @@
 							}			
 						//	switch(currentOrientation) 
 						//	switch(window.orientation)   
-							if(currentOrientation != prevOrientation && currentOrientation.includes("landscape") && orientationOnLastLoad.includes("portrait"))
-							{ 
-								
+							
+						
+						
+						if(currentOrientation != previousOrientation && currentOrientation.includes("landscape")){
 								console.log("landscape");
 								console.log("device held horizontally.");
 								document.getElementsByName("firstHeading")[0].style.fontSize = 'xx-large';
 								document.getElementsByName("secondHeading")[0].style.fontSize = 'large';
 								document.getElementsByName("thirdHeading")[0].style.fontSize = 'large';
-							//	document.getElementsByName("tips")[0].style.fontSize = 'medium';
-							//	document.getElementById("downloadGuide").style.fontSize = 'medium';
-							//	document.getElementById("tryDownload").style.fontSize = 'medium';
-								
-								document.getElementsByName("tips")[0].style.fontSize = 'xx-small';
-								document.getElementById("downloadGuide").style.fontSize = 'xx-small';
-								document.getElementById("tryDownload").style.fontSize = 'xx-small';
-								
+								document.getElementsByName("tips")[0].style.fontSize = 'medium';
+								document.getElementById("downloadGuide").style.fontSize = 'medium';
+								document.getElementById("tryDownload").style.fontSize = 'medium';
 								document.getElementsByName("YourName")[0].style.fontSize = 'large';
 								document.getElementsByName("YourName")[0].style.width = '300px';
 								document.getElementsByName("FY")[0].style.fontSize = 'large';
 								document.getElementsByName("FY")[0].style.width = '180px';
 								document.getElementsByName("generatePDF")[0].style.fontSize = 'large';
-							//	document.getElementsByName("developerInfo")[0].style.fontSize = 'smaller';
-								document.getElementsByName("developerInfo")[0].style.fontSize = 'xx-small';
+								document.getElementsByName("developerInfo")[0].style.fontSize = 'medium';
 								document.getElementsByName("footer")[0].style.fontSize = 'smaller';
-								prevOrientation = "landscape";
-								
-								
-							}	
+								previousOrientation = "landscape";
+								break;
+						}
+
 						
-						
-							if(currentOrientation != prevOrientation && currentOrientation.includes("portrait") && orientationOnLastLoad.includes("portrait"))
-							{		
-								
+						else if(currentOrientation != previousOrientation && currentOrientation.includes("portrait")){
 								console.log("portrait");
 								console.log("device held vertically.");
 								document.getElementsByName("firstHeading")[0].style.fontSize = 'larger';
@@ -762,67 +750,11 @@
 								document.getElementsByName("FY")[0].style.width = '160px';
 								document.getElementsByName("generatePDF")[0].style.fontSize = 'medium';
 								document.getElementsByName("developerInfo")[0].style.fontSize = 'x-small';
-							//	document.getElementsByName("developerInfo")[0].style.fontSize = 'small';
 								document.getElementsByName("footer")[0].style.fontSize = 'xx-small';
-								prevOrientation = "portrait";
-								
-							} 
-							
-							if(currentOrientation != prevOrientation && currentOrientation.includes("portrait") && orientationOnLastLoad.includes("landscape")){
-								console.log("portrait");
-								console.log("device held vertically.");
-								document.getElementsByName("firstHeading")[0].style.fontSize = 'larger';
-								document.getElementsByName("secondHeading")[0].style.fontSize = 'small';
-								document.getElementsByName("thirdHeading")[0].style.fontSize = 'small';
-							
-							//	document.getElementsByName("tips")[0].style.fontSize = 'x-small';
-							//	document.getElementById("downloadGuide").style.fontSize = 'x-small';
-							//	document.getElementById("tryDownload").style.fontSize = 'x-small';
-								
-								document.getElementsByName("tips")[0].style.fontSize = 'larger';
-								document.getElementById("downloadGuide").style.fontSize = 'larger';
-								document.getElementById("tryDownload").style.fontSize = 'larger';
-								
-								document.getElementsByName("YourName")[0].style.fontSize = 'medium';
-								document.getElementsByName("YourName")[0].style.width = '260px';
-								document.getElementsByName("FY")[0].style.fontSize = 'medium';
-								document.getElementsByName("FY")[0].style.width = '160px';
-								document.getElementsByName("generatePDF")[0].style.fontSize = 'large';
-								
-							//	document.getElementsByName("developerInfo")[0].style.fontSize = 'x-small';
-								document.getElementsByName("developerInfo")[0].style.fontSize = 'medium';
-								document.getElementsByName("footer")[0].style.fontSize = 'xx-small';
-							}
-							
-							
-							if(currentOrientation != prevOrientation && currentOrientation.includes("landscape") && orientationOnLastLoad.includes("landscape")){
-								console.log("portrait");
-								console.log("device held vertically.");
-								alert(check);
-								document.getElementsByName("firstHeading")[0].style.fontSize = '6vh';
-								document.getElementsByName("secondHeading")[0].style.fontSize = '4vh';
-								document.getElementsByName("thirdHeading")[0].style.fontSize = '4vh';
-							
-							//	document.getElementsByName("tips")[0].style.fontSize = 'x-small';
-							//	document.getElementById("downloadGuide").style.fontSize = 'x-small';
-							//	document.getElementById("tryDownload").style.fontSize = 'x-small';
-								
-								document.getElementsByName("tips")[0].style.fontSize = 'medium';  //larger
-								document.getElementById("downloadGuide").style.fontSize = 'medium';
-								document.getElementById("tryDownload").style.fontSize = 'medium';
-								
-								document.getElementsByName("YourName")[0].style.fontSize = 'medium';
-								document.getElementsByName("YourName")[0].style.width = '260px';
-								document.getElementsByName("FY")[0].style.fontSize = 'medium';
-								document.getElementsByName("FY")[0].style.width = '160px';
-								document.getElementsByName("generatePDF")[0].style.fontSize = 'large';
-								
-							//	document.getElementsByName("developerInfo")[0].style.fontSize = 'x-small';
-								document.getElementsByName("developerInfo")[0].style.fontSize = 'medium';
-								document.getElementsByName("footer")[0].style.fontSize = 'x-large';
-							}
-							
-											
+								previousOrientation = "portrait";
+								break;
+						}
+												
 				}
 			
 			
