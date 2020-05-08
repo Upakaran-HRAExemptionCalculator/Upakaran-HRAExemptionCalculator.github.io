@@ -752,16 +752,16 @@
 							/*	document.getElementsByName("tips")[0].style.fontSize = 'x-small';
 								document.getElementById("downloadGuide").style.fontSize = 'x-small';
 								document.getElementById("tryDownload").style.fontSize = 'x-small'; */
-								document.getElementsByName("tips")[0].style.fontSize = 'medium';
-								document.getElementById("downloadGuide").style.fontSize = 'medium';
-								document.getElementById("tryDownload").style.fontSize = 'medium';
+								document.getElementsByName("tips")[0].style.fontSize = 'large'; // medium
+								document.getElementById("downloadGuide").style.fontSize = 'large'; // medium
+								document.getElementById("tryDownload").style.fontSize = 'large'; // medium
 								document.getElementsByName("YourName")[0].style.fontSize = 'medium';
 								document.getElementsByName("YourName")[0].style.width = '260px';
 								document.getElementsByName("FY")[0].style.fontSize = 'medium';
 								document.getElementsByName("FY")[0].style.width = '160px';
 								document.getElementsByName("generatePDF")[0].style.fontSize = 'medium';
 							//	document.getElementsByName("developerInfo")[0].style.fontSize = 'x-small';
-								document.getElementsByName("developerInfo")[0].style.fontSize = 'medium';
+								document.getElementsByName("developerInfo")[0].style.fontSize = 'large'; // medium
 								document.getElementsByName("footer")[0].style.fontSize = 'xx-small';
 								previousOrientation = "portrait";
 								
@@ -774,9 +774,9 @@
 								document.getElementsByName("firstHeading")[0].style.fontSize = 'larger';
 								document.getElementsByName("secondHeading")[0].style.fontSize = 'small';
 								document.getElementsByName("thirdHeading")[0].style.fontSize = 'small';
-								document.getElementsByName("tips")[0].style.fontSize = 'small'; // x-small
-								document.getElementById("downloadGuide").style.fontSize = 'small'; // x-small
-								document.getElementById("tryDownload").style.fontSize = 'small'; // x-small
+								document.getElementsByName("tips")[0].style.fontSize = 'x-small'; // x-small
+								document.getElementById("downloadGuide").style.fontSize = 'x-small'; // x-small
+								document.getElementById("tryDownload").style.fontSize = 'x-small'; // x-small
 							/*	document.getElementsByName("tips")[0].style.fontSize = 'medium';
 								document.getElementById("downloadGuide").style.fontSize = 'medium';
 								document.getElementById("tryDownload").style.fontSize = 'medium'; */
@@ -785,7 +785,7 @@
 								document.getElementsByName("FY")[0].style.fontSize = 'medium';
 								document.getElementsByName("FY")[0].style.width = '160px';
 								document.getElementsByName("generatePDF")[0].style.fontSize = 'medium';
-								document.getElementsByName("developerInfo")[0].style.fontSize = 'small'; // x-small
+								document.getElementsByName("developerInfo")[0].style.fontSize = 'x-small'; // x-small
 							//	document.getElementsByName("developerInfo")[0].style.fontSize = 'medium';
 								document.getElementsByName("footer")[0].style.fontSize = 'xx-small';
 								previousOrientation = "portrait";
@@ -817,7 +817,7 @@
 							//	alert(document.getElementsByName("developerInfo")[0].style.fontSize);
 							//	document.getElementsByName("developerInfo")[0].style.fontSize = 'x-small';
 							//	document.getElementsByName("footer")[0].style.fontSize = 'smaller';
-								document.getElementsByName("footer")[0].style.fontSize = 'medium'; //large
+								document.getElementsByName("footer")[0].style.fontSize = 'small'; //large
 								
 								previousOrientation = "landscape";
 								
