@@ -236,7 +236,7 @@
 		console.log("Alert box is now hidden.");
 		document.getElementById("bodyContainer").style.display = 'block';
 		document.body.style.backgroundImage  = "url('./Images/BgImgFinal_mobile_version.jpg')";
-		handleOrientationOnHideAlert();
+	//	handleOrientationOnHideAlert();
 		return;	
 	}
 	
