@@ -593,9 +593,11 @@
 			
 					if(window.innerHeight > window.innerWidth){
 								previousOrientation = "portrait";
+								orientationOnLastLoad = "portrait";
 							}
 							else{
 								previousOrientation = "landscape";
+								orientationOnLastLoad = "landscape";
 							}
 			
 					switch(window.orientation) 
@@ -714,9 +716,10 @@
 							
 						
 						
-						if(currentOrientation != previousOrientation && currentOrientation.includes("landscape")){
+						if(currentOrientation != previousOrientation && currentOrientation.includes("landscape")  && orientationOnLastLoad.includes("portrait")){
 								console.log("landscape");
 								console.log("device held horizontally.");
+								alert("device held horizontally.");
 								document.getElementsByName("firstHeading")[0].style.fontSize = 'xx-large';
 								document.getElementsByName("secondHeading")[0].style.fontSize = 'large';
 								document.getElementsByName("thirdHeading")[0].style.fontSize = 'large';
@@ -742,6 +745,7 @@
 						else if(currentOrientation != previousOrientation && currentOrientation.includes("portrait")){
 								console.log("portrait");
 								console.log("device held vertically.");
+								alert("device held vertically.");
 								document.getElementsByName("firstHeading")[0].style.fontSize = 'larger';
 								document.getElementsByName("secondHeading")[0].style.fontSize = 'small';
 								document.getElementsByName("thirdHeading")[0].style.fontSize = 'small';
