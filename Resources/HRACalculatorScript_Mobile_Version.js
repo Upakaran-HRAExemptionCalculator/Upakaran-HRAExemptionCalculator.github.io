@@ -719,7 +719,7 @@
 						if(currentOrientation != previousOrientation && currentOrientation.includes("landscape")  && orientationOnLastLoad.includes("portrait")){
 								console.log("landscape");
 								console.log("device held horizontally.");
-								alert("device held horizontally.");
+								
 								document.getElementsByName("firstHeading")[0].style.fontSize = 'xx-large';
 								document.getElementsByName("secondHeading")[0].style.fontSize = 'large';
 								document.getElementsByName("thirdHeading")[0].style.fontSize = 'large';
@@ -745,7 +745,7 @@
 						 if(currentOrientation != previousOrientation && currentOrientation.includes("portrait") && orientationOnLastLoad.includes("landscape")){
 								console.log("portrait");
 								console.log("device held vertically.");
-								alert("device held vertically.");
+								
 								document.getElementsByName("firstHeading")[0].style.fontSize = 'larger';
 								document.getElementsByName("secondHeading")[0].style.fontSize = 'small';
 								document.getElementsByName("thirdHeading")[0].style.fontSize = 'small';
@@ -770,7 +770,7 @@
 						 if(currentOrientation != previousOrientation && currentOrientation.includes("portrait") && orientationOnLastLoad.includes("portrait")){
 								console.log("portrait");
 								console.log("device held vertically.");
-								alert("device held vertically.");
+								
 								document.getElementsByName("firstHeading")[0].style.fontSize = 'larger';
 								document.getElementsByName("secondHeading")[0].style.fontSize = 'small';
 								document.getElementsByName("thirdHeading")[0].style.fontSize = 'small';
@@ -799,24 +799,25 @@
 								document.getElementsByName("firstHeading")[0].style.fontSize = 'xx-large';
 								document.getElementsByName("secondHeading")[0].style.fontSize = 'large';
 								document.getElementsByName("thirdHeading")[0].style.fontSize = 'large';
-								alert(document.getElementsByName("firstHeading")[0].style.fontSize);
-								alert(document.getElementsByName("secondHeading")[0].style.fontSize);
-								alert(document.getElementsByName("thirdHeading")[0].style.fontSize);
-							//	document.getElementsByName("tips")[0].style.fontSize = 'medium';
-							//	document.getElementById("downloadGuide").style.fontSize = 'medium';
-							//	document.getElementById("tryDownload").style.fontSize = 'medium';
-								document.getElementsByName("tips")[0].style.fontSize = 'x-small';
-								document.getElementById("downloadGuide").style.fontSize = 'x-small';
-								document.getElementById("tryDownload").style.fontSize = 'x-small';
+								document.getElementsByName("tips")[0].style.fontSize = 'medium';
+								document.getElementById("downloadGuide").style.fontSize = 'medium';
+								document.getElementById("tryDownload").style.fontSize = 'medium';
+								alert(document.getElementsByName("tips")[0].style.fontSize);
+								alert(document.getElementsByName("downloadGuide")[0].style.fontSize);
+								alert(document.getElementsByName("tryDownload")[0].style.fontSize);
+							//	document.getElementsByName("tips")[0].style.fontSize = 'x-small';
+							//	document.getElementById("downloadGuide").style.fontSize = 'x-small';
+							//	document.getElementById("tryDownload").style.fontSize = 'x-small';
 								document.getElementsByName("YourName")[0].style.fontSize = 'large';
 								document.getElementsByName("YourName")[0].style.width = '300px';
 								document.getElementsByName("FY")[0].style.fontSize = 'large';
 								document.getElementsByName("FY")[0].style.width = '180px';
 								document.getElementsByName("generatePDF")[0].style.fontSize = 'large';
-							//	document.getElementsByName("developerInfo")[0].style.fontSize = 'medium';
-								document.getElementsByName("developerInfo")[0].style.fontSize = 'x-small';
+								document.getElementsByName("developerInfo")[0].style.fontSize = 'medium';
+								alert(document.getElementsByName("developerInfo")[0].style.fontSize);
+							//	document.getElementsByName("developerInfo")[0].style.fontSize = 'x-small';
 								document.getElementsByName("footer")[0].style.fontSize = 'smaller';
-								alert(document.getElementsByName("footer")[0].style.fontSize);
+								
 								previousOrientation = "landscape";
 								
 						}
