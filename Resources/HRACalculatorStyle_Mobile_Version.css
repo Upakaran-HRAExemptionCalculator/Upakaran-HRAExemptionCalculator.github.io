@@ -14,7 +14,7 @@
 	
 	#bodyContainer{
 		display : block;
-		-webkit-text-size-adjust: none;
+		-webkit-text-size-adjust: none;   /* this prevented android chrome to resize font size automatically*/
 		
 	}
 
