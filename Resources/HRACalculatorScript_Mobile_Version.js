@@ -193,15 +193,7 @@
 								return;
 						} **/
 						
-						if(FinalHRAExemptMonthly<=0){
-							document.getElementById("ZeroMessage").style.display = 'block';
-							document.getElementById("HRAMonthly").innerText = 0;
-							document.getElementById("HRAYearly").innerText = 0;
-						}
 						
-						else if(FinalHRAExemptMonthly>0){
-							document.getElementById("ZeroMessage").style.display = 'none';
-						}
 					
 								if( parseInt(Rent.value.trim()) > 8333.33){
 									document.getElementById("PANMessage").style.display = 'block';
@@ -210,6 +202,17 @@
 								else if(parseInt(Rent.value.trim()) < 8333.33){
 									document.getElementById("PANMessage").style.display = 'none';
 								}
+								
+									if(FinalHRAExemptMonthly<=0){
+									document.getElementById("ZeroMessage").style.display = 'block';
+									document.getElementById("HRAMonthly").innerText = 0;
+									document.getElementById("HRAYearly").innerText = 0;
+									document.getElementById("PANMessage").style.display = 'none';
+									}
+
+									else if(FinalHRAExemptMonthly>0){
+									document.getElementById("ZeroMessage").style.display = 'none';
+									}
 					
 					showDispMsg();
 			}

@@ -26,15 +26,18 @@
 	 return;	
 	}
 	
-	function toggleBorderColor(element){
+	function toggleColor(element){
 		//var dispMsgDiv = document.getElementById("dispMsg");
+		console.log("toggleColor");
 		for (var i = 0 ; i < 10 ; i++){
 			if(i%2 == 0){
-				element.style.border = '2px solid red';
+				element.style.color = 'red';
+				console.log("black");
 				sleep(500);
 			}
 			else{
-				element.style.border = '2px solid blue';
+				element.style.color = 'black';
+				console.log("red");
 				sleep(500);
 			}
 		}
@@ -213,25 +216,31 @@
 								return;
 						} **/
 						
-						if(FinalHRAExemptMonthly<=0){
-							document.getElementById("ZeroMessage").style.display = 'block';
-							document.getElementById("HRAMonthly").innerText = 0;
-							document.getElementById("HRAYearly").innerText = 0;
-						}
 						
-						else if(FinalHRAExemptMonthly>0){
-							document.getElementById("ZeroMessage").style.display = 'none';
-						}
 					
 								if( parseInt(Rent.value.trim()) > 8333.33){
 									document.getElementById("PANMessage").style.display = 'block';
+									
 								}
 								
 								else if(parseInt(Rent.value.trim()) < 8333.33){
 									document.getElementById("PANMessage").style.display = 'none';
 								}
+								
+								if(FinalHRAExemptMonthly<=0){
+								document.getElementById("ZeroMessage").style.display = 'block';
+								document.getElementById("HRAMonthly").innerText = 0;
+								document.getElementById("HRAYearly").innerText = 0;
+								document.getElementById("PANMessage").style.display = 'none';
+
+								}
+
+								else if(FinalHRAExemptMonthly>0){
+								document.getElementById("ZeroMessage").style.display = 'none';
+								}
 					
 					showDispMsg();
+					
 					
 			}
 	}
@@ -494,7 +503,7 @@
 			
 			doc.text(15,130, 'Your yearly HRA exemption is : Rs '+yearlyHRA+'.'); //X,Y are the position
 			
-			if(document.getElementById("PANMessage").style.display == 'none'){
+			if(document.getElementById("PANMessage").style.display == 'none'  ){
 				
 				doc.line(15, 135, 195, 135); // horizontal line
 			
@@ -508,11 +517,11 @@
 				
 			}
 			
-			if(document.getElementById("PANMessage").style.display == 'block'){
+			if(document.getElementById("PANMessage").style.display == 'block'  ){
 				
 				doc.text(15,140, '** Your monthly rent is greater than Rupees 8333.33. **'); //X,Y are the position
 				
-				doc.text(15,150, '**  You need to submit your Landlord\'s PAN number to your employer.  **'); //X,Y are the position
+				doc.text(15,150, '** You need to submit your Landlord\'s PAN number to your employer. **'); //X,Y are the position
 				
 				doc.line(15, 155, 195, 155); // horizontal line
 			
@@ -525,6 +534,9 @@
 				doc.text(15,194, '9163769466 / 8908823006'); //X,Y are the position
 				
 			}
+			
+			
+			
 			
 			console.log("saving pdf");
 			//Saving docment using data-uri
