@@ -9,6 +9,7 @@
 	 var disp = dispMsgDiv.style.display;
 	 dispMsgDiv.style.display = 'none';
 	 console.log("Calculated message is now hidden.");
+	
 	 return;
 	}
 
@@ -20,7 +21,25 @@
 	 var disp = dispMsgDiv.style.display;
 	 dispMsgDiv.style.display = 'block';
 	 console.log("Calculated message is now displayed.");
+	 				
+				//	toggleDispMsgColor();
 	 return;	
+	}
+	
+	function toggleBorderColor(element){
+		//var dispMsgDiv = document.getElementById("dispMsg");
+		for (var i = 0 ; i < 10 ; i++){
+			if(i%2 == 0){
+				element.style.border = '2px solid red';
+				sleep(500);
+			}
+			else{
+				element.style.border = '2px solid blue';
+				sleep(500);
+			}
+		}
+		
+		return;
 	}
 
 	function sleep(delay) {
@@ -29,6 +48,8 @@
 	}
 
 	function checkInputsAndAlert(){
+		
+		
 		
 		console.log("inside check inputs and alert");
 		
@@ -65,7 +86,7 @@
 		else if (DA.value.trim().length == 0){
 			DA.value="";
 			hideDispMsg();
-			showAlertBox("Please enter value for Dearness Allowance component of salary.");
+			showAlertBox("Please enter value for Dearness Allowance component of salary. If you do not receive any Dearness Allowance, please enter 0.");
 			return;
 		}
 		
@@ -90,10 +111,10 @@
 			return;
 		}
 		
-		else if (parseInt(HRA.value.trim()) < 0){
+		else if (parseInt(HRA.value.trim()) <= 0){
 			HRA.value="";
 			hideDispMsg();
-			showAlertBox("House Rent Allowance component of salary can not be negative.");
+			showAlertBox("House Rent Allowance component of salary can not be negative or zero.");
 			return;
 		}
 		
@@ -185,11 +206,21 @@
 			
 				
 				
-						if(FinalHRAExemptMonthly<0){
+					/**	if(FinalHRAExemptMonthly<0){
 								hideDispMsg();
 								document.getElementById("HRAForm").reset();
 								showAlertBox("Calculated value is negative. You must have entered some incorrect value. Else your rent is too less to claim HRA Exemption.");
 								return;
+						} **/
+						
+						if(FinalHRAExemptMonthly<=0){
+							document.getElementById("ZeroMessage").style.display = 'block';
+							document.getElementById("HRAMonthly").innerText = 0;
+							document.getElementById("HRAYearly").innerText = 0;
+						}
+						
+						else if(FinalHRAExemptMonthly>0){
+							document.getElementById("ZeroMessage").style.display = 'none';
 						}
 					
 								if( parseInt(Rent.value.trim()) > 8333.33){
@@ -201,6 +232,7 @@
 								}
 					
 					showDispMsg();
+					
 			}
 	}
 	
@@ -247,8 +279,11 @@
 	}
 	
 	function myPDFFunction(){
+		
 
 			console.log("inside download function");
+			
+			
 	
 			var dispMsgDiv = document.getElementById("dispMsg");
 			

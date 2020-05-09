@@ -160,6 +160,10 @@
 		display : none;
 	}
 	
+		#ZeroMessage{
+		display : none;
+	}
+	
 	  @font-face {
 		  font-family: 'Comic Sans MS';
 		  src: url("./Comic_final.ttf");

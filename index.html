@@ -141,9 +141,9 @@
 							<tr>
 								<td colspan=2>
 									<div style="text-align: center;align:right;width:50%;float:left">
-										<input type="reset" value="   Reset   " style="display: block; margin: 0 auto;font-family:Comic Sans MS;font-weight: bold;" onclick="hideDispMsg() ; ResetNameAndFY()"> </div>
+										<input type="reset" value="   Reset   " style="display: block; margin: 0 auto;font-family:Comic Sans MS;font-weight: bold;" onclick="hideDispMsg() ; ResetNameAndFY() ; " id = "calculateButton"> </div>
 									<div style="text-align: center;align:left;width:50%;float:left">
-										<input type="button" value=" Calculate " style="display: block; margin: 0 auto;font-family:Comic Sans MS;font-weight: bold; " onclick=" checkInputsAndAlert() "> </div>
+										<input type="button" value=" Calculate " style="display: block; margin: 0 auto;font-family:Comic Sans MS;font-weight: bold; " onclick=" checkInputsAndAlert() ; " id = "resetButton"> </div>
 								</td>
 							</tr>
 			</table>
@@ -168,6 +168,12 @@
 									<br>
 									<span  style="margin: 0 auto;font-family:Comic Sans MS;font-weight: bold;">** Your monthly rent is greater than Rupees 8333.33. You need to submit your Landlord's PAN number to your employer. **</span>
 								</u> </div>
+								<div  id = "ZeroMessage" style="text-align: center;align:right;width:100%;"><u>
+									<br>
+									<span  style="margin: 0 auto;font-family:Comic Sans MS;font-weight: bold;">** Your actual rent is too less to claim HRA exemption. Please ensure that actual rent is more than 10% of Basic + Dearness Allowance. **</span>
+								</u> </div>
+								
+								
 							</div>
 						</div>
 						
@@ -355,7 +361,7 @@
 				
 				<div style="padding-left : 50px; padding-right : 50px ; text-align : center">
 				<span style=" margin: 0 auto;font-family:Comic Sans MS;font-weight: bold;">
-				Are you facing screen alignment issues?? <div style = "display : inline ; vertical-align: middle"> <img src="./logos/sad.png" height="23 px" width="23px" style = ""> </div> Screen appearing distorted?? <div style = "display : inline ; vertical-align: middle">  <img src="./logos/frown.png" height="25 px" width="25px"> </div> You are currently using the desktop version. <div style = "display : inline ; vertical-align: middle">  <img src="./logos/relieved.png" height="25 px" width="25px"> </div> <br > To switch to the mobile version
+				Are you facing font alignment issues?? <div style = "display : inline ; vertical-align: middle"> <img src="./logos/sad.png" height="23 px" width="23px" style = ""> </div> Screen appearing distorted?? <div style = "display : inline ; vertical-align: middle">  <img src="./logos/frown.png" height="25 px" width="25px"> </div> You are currently using the desktop version. <div style = "display : inline ; vertical-align: middle">  <img src="./logos/relieved.png" height="25 px" width="25px"> </div> <br > To switch to the mobile version
 				<a href="./mobile.html" target="_self" style = "color : blue ;">click here.</a> <div style = "display : inline ; vertical-align: middle"> <img src="./logos/happy.png" height="25 px" width="25px"> </div>
 				<br>Application best viewed in Chrome/Firefox from Desktops/Laptops and Chrome from android mobiles.
 				</span>
