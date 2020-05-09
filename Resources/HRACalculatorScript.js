@@ -489,7 +489,7 @@
 			
 			doc.text(15,65, 'Basic component of Salary : Rs '+Basic); //X,Y are the position
 			
-			doc.text(15,75, 'Dearness Allowance component of salary : Rs '+DA); //X,Y are the position
+			doc.text(15,75, 'Dearness Allowance (DA) component of salary : Rs '+DA); //X,Y are the position
 			
 			doc.text(15,85, 'House Rent Allowance component of salary : Rs '+HRA); //X,Y are the position
 			
@@ -503,7 +503,7 @@
 			
 			doc.text(15,130, 'Your yearly HRA exemption is : Rs '+yearlyHRA+'.'); //X,Y are the position
 			
-			if(document.getElementById("PANMessage").style.display == 'none'  ){
+			if(document.getElementById("PANMessage").style.display == 'none'  && document.getElementById("ZeroMessage").style.display == 'none'){
 				
 				doc.line(15, 135, 195, 135); // horizontal line
 			
@@ -517,11 +517,29 @@
 				
 			}
 			
-			if(document.getElementById("PANMessage").style.display == 'block'  ){
+			if(document.getElementById("PANMessage").style.display == 'block' && document.getElementById("ZeroMessage").style.display == 'none' ){
 				
 				doc.text(15,140, '** Your monthly rent is greater than Rupees 8333.33. **'); //X,Y are the position
 				
 				doc.text(15,150, '** You need to submit your Landlord\'s PAN number to your employer. **'); //X,Y are the position
+				
+				doc.line(15, 155, 195, 155); // horizontal line
+			
+				doc.text(15,170, 'Regards,'); //X,Y are the position
+				
+				doc.text(15,178, 'Upakaran Acharyya Chowdhury.'); //X,Y are the position
+				
+				doc.text(15,186, 'upakaran.0407@gmail.com'); //X,Y are the position
+				
+				doc.text(15,194, '9163769466 / 8908823006'); //X,Y are the position
+				
+			}
+			
+			if(document.getElementById("PANMessage").style.display == 'none' && document.getElementById("ZeroMessage").style.display == 'block' ){
+				
+				doc.text(15,140, '** Your actual rent is far too less to claim HRA exemption. **'); //X,Y are the position
+				
+				doc.text(15,150, '** To claim HRA exemption, please ensure that your actual rent is more than 10% of (Basic + DA). **'); //X,Y are the position
 				
 				doc.line(15, 155, 195, 155); // horizontal line
 			
