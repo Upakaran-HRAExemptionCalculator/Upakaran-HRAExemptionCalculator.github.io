@@ -680,7 +680,15 @@
 	}
 				
 			
-			
+	function increaseLinkFont(){
+		
+		document.getElementById("click_here").style.color = "red";
+	}
+	
+	function decreaseLinkFont(){
+		
+		document.getElementById("click_here").style.color = "blue";
+	}		
 			
 			
 			
