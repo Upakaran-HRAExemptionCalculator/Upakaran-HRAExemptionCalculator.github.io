@@ -23,6 +23,47 @@
 	 return;	
 	}
 
+	var interval ;
+	
+	function toggleColor(){
+		interval = setInterval( toggleMsgColor , 250);
+	}
+	
+	var timesRun = 0;
+	
+	
+	function toggleMsgColor(){
+		var dispMsgDiv = document.getElementById("dispMsg");
+		console.log("toggleMsgColor");
+			
+		if(dispMsgDiv.style.color != "red"){
+		dispMsgDiv.style.color = "red";
+			console.log(dispMsgDiv.style.color);
+			console.log(timesRun);
+			timesRun += 1;
+			
+		}
+		 else{
+		dispMsgDiv.style.color = "black";
+		console.log(dispMsgDiv.style.color);
+			console.log(timesRun);
+			timesRun += 1;
+		}
+			if(timesRun == 10){
+				clearToggle();
+			}
+				
+	} 
+				
+	function clearToggle(){
+			
+			console.log("clearToggle");
+			clearInterval(interval);
+			interval = "";
+			timesRun = 0;
+		
+	}
+	
 	function sleep(delay) {
 		var start = new Date().getTime();
 		while (new Date().getTime() < start + delay);

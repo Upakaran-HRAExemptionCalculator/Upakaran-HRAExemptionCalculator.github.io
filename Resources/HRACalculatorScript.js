@@ -9,7 +9,6 @@
 	 var disp = dispMsgDiv.style.display;
 	 dispMsgDiv.style.display = 'none';
 	 console.log("Calculated message is now hidden.");
-	
 	 return;
 	}
 
@@ -21,29 +20,49 @@
 	 var disp = dispMsgDiv.style.display;
 	 dispMsgDiv.style.display = 'block';
 	 console.log("Calculated message is now displayed.");
-	 				
-				//	toggleDispMsgColor();
-	 return;	
+	return;
 	}
 	
-	function toggleColor(element){
-		//var dispMsgDiv = document.getElementById("dispMsg");
-		console.log("toggleColor");
-		for (var i = 0 ; i < 10 ; i++){
-			if(i%2 == 0){
-				element.style.color = 'red';
-				console.log("black");
-				sleep(500);
-			}
-			else{
-				element.style.color = 'black';
-				console.log("red");
-				sleep(500);
-			}
-		}
-		
-		return;
+	var interval ;
+	
+	function toggleColor(){
+		interval = setInterval( toggleMsgColor , 250);
 	}
+	
+	var timesRun = 0;
+	
+	
+	function toggleMsgColor(){
+		var dispMsgDiv = document.getElementById("dispMsg");
+		console.log("toggleMsgColor");
+			
+		if(dispMsgDiv.style.color != "red"){
+		dispMsgDiv.style.color = "red";
+			console.log(dispMsgDiv.style.color);
+			console.log(timesRun);
+			timesRun += 1;
+			
+		}
+		 else{
+		dispMsgDiv.style.color = "black";
+		console.log(dispMsgDiv.style.color);
+			console.log(timesRun);
+			timesRun += 1;
+		}
+			if(timesRun == 10){
+				clearToggle();
+			}
+				
+	} 
+				
+	function clearToggle(){
+			
+			console.log("clearToggle");
+			clearInterval(interval);
+			interval = "";
+			timesRun = 0;
+		
+	}			
 
 	function sleep(delay) {
 		var start = new Date().getTime();
