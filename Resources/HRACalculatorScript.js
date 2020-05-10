@@ -263,6 +263,9 @@
 		console.log("Rest body is now hidden.");
 		document.getElementById("mainBody").style.border = '0px dotted maroon';
 		document.body.style.backgroundImage  = "url('./Images/BgImgAlert.jpg')";
+		if(pdfSave == true){
+			document.getElementById("alertBody").style.backgroundImage = "url('./Images/alertSmileyPDF.jpg')";
+		}
 		return;
 		
 	}
@@ -272,6 +275,10 @@
 		document.getElementById("borderTrick1").style.display = 'none';
 		document.getElementById("borderTrick2").style.display = 'none';
 		var alertContainer = document.getElementById("alertContainer");
+		if(pdfSave == true){
+			document.getElementById("alertBody").style.backgroundImage = "url('./Images/alert.png')";
+			pdfSave = false;
+		}
 		alertContainer.style.display = 'none';
 		console.log("Alert box is now hidden.");
 		document.getElementById("bodyContainer").style.display = 'block';
@@ -286,6 +293,8 @@
 		document.getElementById("borderTrick1").style.height = window.innerHeight - 20 + "px";
 		document.getElementById("borderTrick2").style.height = window.innerHeight - 20 + "px";	
 	}
+	
+	var pdfSave = "";
 	
 	function myPDFFunction(){
 		
@@ -562,6 +571,10 @@
 				
 			//get the PDF buffer
 			doc.output(); 
+			
+			pdfSave = true;
+			
+			showAlertBox("Yipiee!! Your PDF is saved successfully!! \n Please check your browser's default downloads folder to view saved PDF.");
 			 
 			//Draw Triangle
 			//doc.setLineWidth(1);
