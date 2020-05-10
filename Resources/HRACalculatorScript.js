@@ -589,5 +589,29 @@
 	//const vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 	//const vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 	
+	function increaseBorder(x){
+		x.style.border = "3px solid red";
+	}
 	
-		
+	function decreaseBorder(x){
+		x.style.border = "2px solid blue";
+	}
+	
+	
+	function increaseBorderMetro(){	
+		document.getElementById("metroSpan").style.border = "3px solid red";
+	}
+	
+	function decreaseBorderMetro(){	
+		document.getElementById("metroSpan").style.border = "2px solid blue";
+	}
+	
+	function increaseBorderNonMetro(){
+		document.getElementById("nonmetroSpan").style.border = "3px solid red";
+	}
+	
+
+	function decreaseBorderNonMetro(){
+		document.getElementById("nonmetroSpan").style.border = "2px solid blue";
+	}
+			

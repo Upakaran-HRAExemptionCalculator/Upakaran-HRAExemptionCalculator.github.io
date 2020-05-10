@@ -39,7 +39,7 @@
 													
 											<div id="iframeButtonContainer" style="text-align: center;align:left;width:100%;height : 20%; ">
 												<div style="text-align: center;width:50%;float:right; padding-right :10px	">
-													<input type="button" value="  OKAY  " style="display: block; margin: 0 auto;font-family:Comic Sans MS;font-weight: bold; float : right ;" onclick = "hideAlertBox()"> 
+													<input type="button" value="  OKAY  " style="display: block; margin: 0 auto;font-family:Comic Sans MS;font-weight: bold; float : right ;" onclick = "hideAlertBox()" onmouseover="increaseBorder(this)" onmouseout="decreaseBorder(this)" onfocus="increaseBorder(this)" onblur="decreaseBorder(this)" > 
 												</div>
 											</div>
 
@@ -69,7 +69,7 @@
 									</td>
 									<td>
 										<div style="vertical-align: middle;text-align: center;color:black;font-weight: bold;">
-											<input type="text" id="basic" name="basic" class="inputBoxes"> </div>
+											<input type="text" id="basic" name="basic" class="inputBoxes" onmouseover="increaseBorder(this)" onmouseout="decreaseBorder(this)" onfocus="increaseBorder(this)" onblur="decreaseBorder(this)" > </div>
 									</td>
 								</div>
 							</tr>
@@ -83,7 +83,7 @@
 									</td>
 									<td>
 										<div style="vertical-align: middle;text-align: center;color:black;font-weight: bold;">
-											<input type="text" id="DA" name="DA" class="inputBoxes"> </div>
+											<input type="text" id="DA" name="DA" class="inputBoxes" onmouseover="increaseBorder(this)" onmouseout="decreaseBorder(this)" onfocus="increaseBorder(this)" onblur="decreaseBorder(this)"> </div>
 									</td>
 								</div>
 							</tr>
@@ -97,7 +97,7 @@
 									</td>
 									<td>
 										<div style="vertical-align: middle;text-align: center;color:black">
-											<input type="text" id="HRA" name="HRA" class="inputBoxes"> </div>
+											<input type="text" id="HRA" name="HRA" class="inputBoxes" onmouseover="increaseBorder(this)" onmouseout="decreaseBorder(this)" onfocus="increaseBorder(this)" onblur="decreaseBorder(this)" > </div>
 									</td>
 								</div>
 							</tr>
@@ -111,7 +111,7 @@
 									</td>
 									<td>
 										<div style="vertical-align: middle;text-align: center;color:black">
-											<input type="text" id="Rent" name="Rent" class="inputBoxes"> </div>
+											<input type="text" id="Rent" name="Rent" class="inputBoxes" onmouseover="increaseBorder(this)" onmouseout="decreaseBorder(this)" onfocus="increaseBorder(this)" onblur="decreaseBorder(this)"> </div>
 									</td>
 								</div>
 							</tr>
@@ -131,10 +131,10 @@
 									</td>
 									<td>
 										<div style="width : 100%; float : center ; vertical-align: middle;text-align: center;float:left; margin:10px;">
-											<input id="Metro" type="radio" name="cityType" value="Metro">
-											<label for="Metro" style="width:50%;font-family:Comic Sans MS ; float : left"><span></span><b>Metro</b></label>
-											<input id="Non-Metro" type="radio" name="cityType" value="Non-Metro">
-											<label for="Non-Metro" style="width:40%;font-family:Comic Sans MS ; float : left"><span></span><b>Non-Metro</b></label>
+											<input id="Metro" type="radio" name="cityType" value="Metro" >
+											<label for="Metro" style="width:50%;font-family:Comic Sans MS ; float : left" onmouseover="increaseBorderMetro()" onmouseout="decreaseBorderMetro()" ><span onmouseover="increaseBorder(this)" onmouseout="decreaseBorder(this)" id = "metroSpan"></span><b>Metro</b></label>
+											<input id="Non-Metro" type="radio" name="cityType" value="Non-Metro" >
+											<label for="Non-Metro" style="width:40%;font-family:Comic Sans MS ; float : left" onmouseover="increaseBorderNonMetro()" onmouseout="decreaseBorderNonMetro()" ><span onmouseover="increaseBorder(this)" onmouseout="decreaseBorder(this)" id = "nonmetroSpan" ></span><b>Non-Metro</b></label>
 										</div>
 									</td>
 								</div>
@@ -143,9 +143,9 @@
 							<tr>
 								<td colspan=2>
 									<div style="text-align: center;align:right;width:50%;float:left">
-										<input type="reset" value="   Reset   " style="display: block; margin: 0 auto;font-family:Comic Sans MS;font-weight: bold;" onclick="hideDispMsg() ; ResetNameAndFY() ; " id = "calculateButton"> </div>
+										<input type="reset" value="   Reset   " style="display: block; margin: 0 auto;font-family:Comic Sans MS;font-weight: bold;" onclick="hideDispMsg() ; ResetNameAndFY() ; " id = "calculateButton" onmouseover="increaseBorder(this)" onmouseout="decreaseBorder(this)" onfocus="increaseBorder(this)" onblur="decreaseBorder(this)"> </div>
 									<div style="text-align: center;align:left;width:50%;float:left">
-										<input type="button" value=" Calculate " style="display: block; margin: 0 auto;font-family:Comic Sans MS;font-weight: bold; " onclick=" checkInputsAndAlert() ; " id = "resetButton"> </div>
+										<input type="button" value=" Calculate " style="display: block; margin: 0 auto;font-family:Comic Sans MS;font-weight: bold; " onclick=" checkInputsAndAlert() ; " id = "resetButton" onmouseover="increaseBorder(this)" onmouseout="decreaseBorder(this)" onfocus="increaseBorder(this)" onblur="decreaseBorder(this)"> </div>
 								</td>
 							</tr>
 			</table>
@@ -266,7 +266,7 @@
 					
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					
-					<input type="text" id="YourName" name="YourName" class="inputBoxes" style="display:inline ; width : 220px"> 
+					<input type="text" id="YourName" name="YourName" class="inputBoxes" style="display:inline ; width : 220px" onmouseover="increaseBorder(this)" onmouseout="decreaseBorder(this)" onfocus="increaseBorder(this)" onblur="decreaseBorder(this)" > 
 					
 							<div style="height:14px;">
 									<br>
@@ -279,7 +279,7 @@
 					
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					
-					<input type="text" id="FY" name="FY" class="inputBoxes" style="display:inline; width : 150px "/> 
+					<input type="text" id="FY" name="FY" class="inputBoxes" style="display:inline; width : 150px " onmouseover="increaseBorder(this)" onmouseout="decreaseBorder(this)" onfocus="increaseBorder(this)" onblur="decreaseBorder(this)" /> 
 					
 							<div style="height:14px;">
 									<br>
@@ -292,7 +292,7 @@
 					
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					
-					<input type="button" value="   Save PDF   " id="generatePDF" name="generatePDF"  style="display: inline; margin: 0 auto;font-family:Comic Sans MS;font-weight: bold; " onclick="myPDFFunction()"/> 
+					<input type="button" value="   Save PDF   " id="generatePDF" name="generatePDF"  style="display: inline; margin: 0 auto;font-family:Comic Sans MS;font-weight: bold; " onclick="myPDFFunction()" onmouseover="increaseBorder(this)" onmouseout="decreaseBorder(this)" onfocus="increaseBorder(this)" onblur="decreaseBorder(this)" /> 
 					
 							<div style="height:30px;">
 									<br>

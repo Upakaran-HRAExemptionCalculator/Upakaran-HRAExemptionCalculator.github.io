@@ -638,7 +638,33 @@
 			}
 			
 			
-			
+		
+	function increaseBorder(x){
+		x.style.border = "3px solid red";
+	}
+	
+	function decreaseBorder(x){
+		x.style.border = "2px solid blue";
+	}
+	
+	
+	function increaseBorderMetro(){	
+		document.getElementById("metroSpan").style.border = "3px solid red";
+	}
+	
+	function decreaseBorderMetro(){	
+		document.getElementById("metroSpan").style.border = "2px solid blue";
+	}
+	
+	function increaseBorderNonMetro(){
+		document.getElementById("nonmetroSpan").style.border = "3px solid red";
+	}
+	
+
+	function decreaseBorderNonMetro(){
+		document.getElementById("nonmetroSpan").style.border = "2px solid blue";
+	}
+				
 			
 			
 			
