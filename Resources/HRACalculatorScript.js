@@ -24,12 +24,12 @@
 	}
 	
 	var interval ;
+	var interval1 ;
 	
 	function toggleColor(){
 		interval = setInterval( toggleMsgColor , 250);
 	}
 	
-	var timesRun = 0;
 	
 	
 	function toggleMsgColor(){
@@ -50,19 +50,48 @@
 			timesRun += 1;
 		}
 			if(timesRun == 10){
-				clearToggle();
+				console.log("clearToggle");
+				clearInterval(interval);
+				interval = "";
+				timesRun = 0;
+			}
+				
+	} 
+	
+	var timesRun = 0;
+	var timesRun1 = 0;
+	
+	
+	function toggleAlertMsgColor(){
+		var message = document.getElementById("warningMessageSpan");
+		var messageOkay = document.getElementById("okayMessageSpan");
+		console.log("toggleAlertMsgColor");
+			
+		if(message.style.color != "blue" && messageOkay.style.color != "blue"){
+		message.style.color = "blue" ;
+		messageOkay.style.color = "blue" ;
+		console.log(messageOkay.style.color);
+			console.log(timesRun1);
+			timesRun1 += 1;
+			
+		}
+		 else{
+		message.style.color = "black" ;
+		messageOkay.style.color = "black" ;
+		console.log(messageOkay.style.color);
+			console.log(timesRun1);
+			timesRun1 += 1;
+		}
+			if(timesRun1 == 6){
+				console.log("clearToggle1");
+				clearInterval(interval1);
+				interval1 = "";
+				timesRun1 = 0;
 			}
 				
 	} 
 				
-	function clearToggle(){
 			
-			console.log("clearToggle");
-			clearInterval(interval);
-			interval = "";
-			timesRun = 0;
-		
-	}			
 
 	function sleep(delay) {
 		var start = new Date().getTime();
@@ -285,6 +314,7 @@
 		if(pdfSave == true){
 			document.getElementById("alertBody").style.backgroundImage = "url('./Images/alertSmileyPDF.jpg')";
 		}
+		interval1 = setInterval( toggleAlertMsgColor , 250);
 		return;
 		
 	}
