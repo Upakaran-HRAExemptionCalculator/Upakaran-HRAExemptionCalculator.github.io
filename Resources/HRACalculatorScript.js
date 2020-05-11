@@ -20,6 +20,9 @@
 	 var disp = dispMsgDiv.style.display;
 	 dispMsgDiv.style.display = 'block';
 	 console.log("Calculated message is now displayed.");
+	 if(checkAlertSoundInPdf != true){
+		 document.getElementById("calculateMsgAudio").play();
+	 }
 	return;
 	}
 	
@@ -82,7 +85,7 @@
 			console.log(timesRun1);
 			timesRun1 += 1;
 		}
-			if(timesRun1 == 6){
+			if(timesRun1 == 10){
 				console.log("clearToggle1");
 				clearInterval(interval1);
 				interval1 = "";
@@ -313,7 +316,13 @@
 		document.body.style.backgroundImage  = "url('./Images/BgImgAlert.jpg')";
 		if(pdfSave == true){
 			document.getElementById("alertBody").style.backgroundImage = "url('./Images/alertSmileyPDF.jpg')";
+			document.getElementById("pdfAlertAudio").play();
 		}
+			else{
+				document.getElementById("alertBody").style.backgroundImage = "url('./Images/alert.png')";
+				document.getElementById("alertAudio").play();
+			}
+				
 		interval1 = setInterval( toggleAlertMsgColor , 250);
 		return;
 		
@@ -332,6 +341,7 @@
 		console.log("Alert box is now hidden.");
 		document.getElementById("bodyContainer").style.display = 'block';
 		document.body.style.backgroundImage  = "url('./Images/BgImgFinal.jpg')";
+		document.getElementById("okayAudio").play();
 		return;	
 	}
 	
@@ -344,6 +354,7 @@
 	}
 	
 	var pdfSave = "";
+	var checkAlertSoundInPdf = "";
 	
 	function myPDFFunction(){
 		
@@ -473,10 +484,13 @@
 					}
 			}
 			
+			checkAlertSoundInPdf = true;
 			
 			checkInputsAndAlert();
 			
 			console.log("return after alert checked");
+			
+			checkAlertSoundInPdf = false;
 		
 		if(document.getElementById("bodyContainer").style.display != "none"){
 			
@@ -624,6 +638,8 @@
 			pdfSave = true;
 			
 			showAlertBox("Yipiee!! Your PDF is saved successfully!! \n Please check your browser's default downloads folder to view saved PDF.");
+			
+			pdfSave = false;
 			 
 			//Draw Triangle
 			//doc.setLineWidth(1);
@@ -638,6 +654,7 @@
 	function ResetNameAndFY(){
 		document.getElementById("YourName").value = "";
 		document.getElementById("FY").value = "";
+		 document.getElementById("resetBtnAudio").play();
 	}
 	
 	// We listen to the resize event
