@@ -774,6 +774,19 @@
 		
 		document.getElementById("click_here").style.color = "blue";
 	}		
-			
-			
+		
+	function playWelcomeSound(){
+		document.getElementById("welcomeAudio").play();
+		sleep(2000);
+	}
+	
+	 window.onload=function(){
+      document.getElementById("welcomeAudio").play();
+    } 
+	
+		function playClickSound(){
+		document.getElementById("linkClickAudio").play();
+		console.log("link clicked");
+		sleep(2000);
+	}
 			
