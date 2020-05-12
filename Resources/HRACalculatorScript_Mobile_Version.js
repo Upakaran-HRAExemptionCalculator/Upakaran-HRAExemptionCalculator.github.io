@@ -1,7 +1,7 @@
 
 
 	/* Coded by Upakaran Acharyya Chowdhury (upakaran.0407@gmail.com , 9163769466)- for desktop app HRA Exemption Calculator */
-	/* Last modified on 11-MAY-2020 by Upakaran Acharyya Chowdhury. */	
+	/* Last modified on 12-MAY-2020 by Upakaran Acharyya Chowdhury. */	
 
 	function hideDispMsg() {
 		
@@ -29,6 +29,8 @@
 	var interval ;
 	
 	function toggleColor(){
+		clearInterval(interval);
+		timesRun = 0;
 		interval = setInterval( toggleMsgColor , 250);
 	}
 	
