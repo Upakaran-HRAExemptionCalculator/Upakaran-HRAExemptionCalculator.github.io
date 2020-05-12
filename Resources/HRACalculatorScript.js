@@ -60,6 +60,7 @@
 				clearInterval(interval);
 				interval = "";
 				timesRun = 0;
+				dispMsgDiv.style.color = "black";
 			}
 				
 	} 
