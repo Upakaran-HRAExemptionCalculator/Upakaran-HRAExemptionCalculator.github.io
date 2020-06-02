@@ -59,6 +59,7 @@
 		border: 2px solid blue;
 		padding: 5px;
 		/*background: transparent;  */
+		outline: none;  /* prevented chrome from self creating any highlighted outlines in textboxes. Otherwise was creating issues.*/
 	}
 
 	.inputBoxes{

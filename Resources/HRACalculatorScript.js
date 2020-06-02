@@ -21,6 +21,7 @@
 	 dispMsgDiv.style.display = 'block';
 	 console.log("Calculated message is now displayed.");
 	 if(checkAlertSoundInPdf != true){
+		
 		 document.getElementById("calculateMsgAudio").play();
 	 }
 	return;
