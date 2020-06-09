@@ -1,7 +1,7 @@
 
 
 	/* Coded by Upakaran Acharyya Chowdhury (upakaran.0407@gmail.com , 9163769466)- for desktop app HRA Exemption Calculator */
-	/* Last modified on 03-JUNE-2020 by Upakaran Acharyya Chowdhury. */	
+	/* Last modified on 09-JUNE-2020 by Upakaran Acharyya Chowdhury. */	
 
 	function hideDispMsg() {
 		
@@ -127,7 +127,7 @@
 			return;
 		}
 		
-		else if (parseInt(basic.value.trim()) <= 0){  // validation to check for negative value input
+		else if (parseFloat(basic.value.trim()) <= 0){  // validation to check for negative value input
 			basic.value="";								// clear the value in that case
 			hideDispMsg();
 			showAlertBox("Basic component of salary can not be negative or zero.");
@@ -148,7 +148,7 @@
 			return;
 		}
 		
-		else if (parseInt(DA.value.trim()) < 0){
+		else if (parseFloat(DA.value.trim()) < 0){
 			DA.value="";
 			hideDispMsg();
 			showAlertBox("Dearness Allowance component of salary can not be negative.");
@@ -169,7 +169,7 @@
 			return;
 		}
 		
-		else if (parseInt(HRA.value.trim()) <= 0){
+		else if (parseFloat(HRA.value.trim()) <= 0){
 			HRA.value="";
 			hideDispMsg();
 			showAlertBox("House Rent Allowance component of salary can not be negative or zero.");
@@ -190,7 +190,7 @@
 			return;
 		}
 		
-		else if (parseInt(Rent.value.trim()) < 0){
+		else if (parseFloat(Rent.value.trim()) < 0){
 			Rent.value="";
 			hideDispMsg();
 			showAlertBox("Actual rent paid to landlord can not be negative.");
@@ -210,7 +210,7 @@
 			return;
 		}
 		
-		else if( parseInt(HRA.value.trim()) > ( 0.6 * parseInt(basic.value.trim()) ) ){
+		else if( parseFloat(HRA.value.trim()) > ( 0.6 * parseFloat(basic.value.trim()) ) ){
 			basic.value="";
 			HRA.value="";
 			hideDispMsg();
@@ -220,10 +220,10 @@
 		
 		else{
 			
-				var comp1 = parseInt(HRA.value.trim()) ;
+				var comp1 = parseFloat(HRA.value.trim()) ;
 				console.log("comp1 is " + comp1);
 				
-				var comp2 = parseInt(Rent.value.trim()) - ( 0.1 * ( parseInt(basic.value.trim())+ parseInt(DA.value.trim()) ) );
+				var comp2 = parseFloat(Rent.value.trim()) - ( 0.1 * ( parseFloat(basic.value.trim())+ parseFloat(DA.value.trim()) ) );
 				console.log("comp2 is " + comp2);
 				
 				var comp3;
@@ -231,11 +231,11 @@
 				var FinalHRAExemptYearly;
 				
 				if(Metro.checked == true){
-					var comp3 = ( 0.5 * ( parseInt(basic.value.trim())+ parseInt(DA.value.trim()) ));
+					var comp3 = ( 0.5 * ( parseFloat(basic.value.trim())+ parseFloat(DA.value.trim()) ));
 				}
 				
 				else if(NMetro.checked == true){
-					var comp3 = ( 0.4 * ( parseInt(basic.value.trim())+ parseInt(DA.value.trim()) ));
+					var comp3 = ( 0.4 * ( parseFloat(basic.value.trim())+ parseFloat(DA.value.trim()) ));
 				}
 				
 				console.log("comp3 is " + comp3);
@@ -252,15 +252,15 @@
 					FinalHRAExemptMonthly = comp3;
 				}
 					
-					FinalHRAExemptYearly = 12 * FinalHRAExemptMonthly;
+					FinalHRAExemptYearly = 12 * FinalHRAExemptMonthly.toFixed(2);
 				
 					console.log("FinalHRAExemptMonthly is " + FinalHRAExemptMonthly);
 					console.log("FinalHRAExemptYearly is " + FinalHRAExemptYearly);
 					
 					
 					
-					document.getElementById("HRAMonthly").innerText = FinalHRAExemptMonthly;
-					document.getElementById("HRAYearly").innerText = FinalHRAExemptYearly;
+					document.getElementById("HRAMonthly").innerText = FinalHRAExemptMonthly.toFixed(2);
+					document.getElementById("HRAYearly").innerText = FinalHRAExemptYearly.toFixed(2);
 			
 				
 				
@@ -273,12 +273,12 @@
 						
 						
 					
-								if( parseInt(Rent.value.trim()) > 8333.33){
+								if( parseFloat(Rent.value.trim()) > 8333.33){
 									document.getElementById("PANMessage").style.display = 'block';
 									
 								}
 								
-								else if(parseInt(Rent.value.trim()) < 8333.33){
+								else if(parseFloat(Rent.value.trim()) < 8333.33){
 									document.getElementById("PANMessage").style.display = 'none';
 								}
 								
