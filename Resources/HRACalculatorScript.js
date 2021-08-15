@@ -472,7 +472,7 @@
 					if(!( yearDiff == 1 || yearDiff == -99 )){
 						console.log("checking  for financial year to be hyphenated number in download PDF and with proper year difference when year length 4,2.");
 						document.getElementById("FY").value = "";
-						showAlertBox("Financial year can only contain hyphenated (-) numbers for years with no spaces in between. \n For example 2019-2020 or 2019-20.");
+						showAlertBox("Financial year is incorrect. Financial Year should be having consecutive years. \n Please enter proper Financial Year. \n For example 2019-2020 or 2019-20.");
 						return;
 					}
 			}
@@ -483,7 +483,7 @@
 					if(!( yearDiff == 1  )){
 						console.log("checking  for financial year to be hyphenated number in download PDF and with proper year difference when year length 4,4.");
 						document.getElementById("FY").value = "";
-						showAlertBox("Financial year can only contain hyphenated (-) numbers for years with no spaces in between. \n For example 2019-2020 or 2019-20.");
+						showAlertBox("Financial year is incorrect. Financial Year should be having consecutive years. \n Please enter proper Financial Year. \n For example 2019-2020 or 2019-20.");
 						return;
 					}
 			}

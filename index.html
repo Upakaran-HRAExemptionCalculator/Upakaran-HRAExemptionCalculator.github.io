@@ -86,11 +86,11 @@
 			</div>
 		</div>
 	</div>
-	<div id="bodyContainer" style="padding : 5px; margin : 0px; border : 2px dotted Maroon ; overflow:auto">
+	<div id="bodyContainer" style="padding : 5px; margin : 0px; border : 2px dotted Maroon ; overflow:auto" >
 		<h1 style="font-family:Comic Sans MS;color:DARKBLUE; margin-left : 50px; margin-right : 50px; "><i> <u>HRA EXEMPTION CALCULATOR</i></u></h1> 
 		<h3 style="font-family:Comic Sans MS;color:DARKBLUE; margin-left : 50px; margin-right : 50px;"><i>Use this application to calculate your House Rent Allowance exemption that you can avail in your yearly Income Tax return.</i></h3>
 		<h3 style="font-family:Comic Sans MS;color:NAVY; margin-left : 50px; margin-right : 50px;"><b><i>Please enter the details in the calculator below and click Calculate to get the exemption values.</b></i></h3>
-		<form id = "HRAForm" method="post" >
+		<form id = "HRAForm" method="post" autocomplete="on">
 			<!-- onsubmit="return false" -->
 			<div style="border: 5px solid MAROON;padding: 50px;margin: 50px;padding-bottom : 30px ; padding-top: 10px">
 				<table style="width:100%" id="table1">
@@ -107,7 +107,7 @@
 									</td>
 									<td>
 										<div style="vertical-align: middle;text-align: center;color:black;font-weight: bold;">
-											<input type="text" id="basic" name="basic" class="inputBoxes" onmouseover="increaseBorder(this)" onmouseout="decreaseBorder(this)" onfocus="increaseBorder(this)" onblur="decreaseBorder(this)" > </div>
+											<input type="text" id="basic" name="basic" class="inputBoxes" onmouseover="increaseBorder(this)" onmouseout="decreaseBorder(this)" onfocus="increaseBorder(this)" onblur="decreaseBorder(this)" autocomplete="on"> </div>
 									</td>
 								</div>
 							</tr>
@@ -121,7 +121,7 @@
 									</td>
 									<td>
 										<div style="vertical-align: middle;text-align: center;color:black;font-weight: bold;">
-											<input type="text" id="DA" name="DA" class="inputBoxes" onmouseover="increaseBorder(this)" onmouseout="decreaseBorder(this)" onfocus="increaseBorder(this)" onblur="decreaseBorder(this)"> </div>
+											<input type="text" id="DA" name="DA" class="inputBoxes" onmouseover="increaseBorder(this)" onmouseout="decreaseBorder(this)" onfocus="increaseBorder(this)" onblur="decreaseBorder(this)" autocomplete="on"> </div>
 									</td>
 								</div>
 							</tr>
@@ -135,7 +135,7 @@
 									</td>
 									<td>
 										<div style="vertical-align: middle;text-align: center;color:black">
-											<input type="text" id="HRA" name="HRA" class="inputBoxes" onmouseover="increaseBorder(this)" onmouseout="decreaseBorder(this)" onfocus="increaseBorder(this)" onblur="decreaseBorder(this)" > </div>
+											<input type="text" id="HRA" name="HRA" class="inputBoxes" onmouseover="increaseBorder(this)" onmouseout="decreaseBorder(this)" onfocus="increaseBorder(this)" onblur="decreaseBorder(this)" autocomplete="on" > </div>
 									</td>
 								</div>
 							</tr>
@@ -149,7 +149,7 @@
 									</td>
 									<td>
 										<div style="vertical-align: middle;text-align: center;color:black">
-											<input type="text" id="Rent" name="Rent" class="inputBoxes" onmouseover="increaseBorder(this)" onmouseout="decreaseBorder(this)" onfocus="increaseBorder(this)" onblur="decreaseBorder(this)"> </div>
+											<input type="text" id="Rent" name="Rent" class="inputBoxes" onmouseover="increaseBorder(this)" onmouseout="decreaseBorder(this)" onfocus="increaseBorder(this)" onblur="decreaseBorder(this)" autocomplete="on"> </div>
 									</td>
 								</div>
 							</tr>
@@ -304,7 +304,7 @@
 					
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					
-					<input type="text" id="YourName" name="YourName" class="inputBoxes" style="display:inline ; width : 220px" onmouseover="increaseBorder(this)" onmouseout="decreaseBorder(this)" onfocus="increaseBorder(this)" onblur="decreaseBorder(this)" > 
+					<input type="text" id="YourName" autocomplete="on" name="YourName" class="inputBoxes" style="display:inline ; width : 220px" onmouseover="increaseBorder(this)" onmouseout="decreaseBorder(this)" onfocus="increaseBorder(this)" onblur="decreaseBorder(this)" > 
 					
 							<div style="height:14px;">
 									<br>
@@ -317,7 +317,7 @@
 					
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					
-					<input type="text" id="FY" name="FY" class="inputBoxes" style="display:inline; width : 150px " onmouseover="increaseBorder(this)" onmouseout="decreaseBorder(this)" onfocus="increaseBorder(this)" onblur="decreaseBorder(this)" /> 
+					<input type="text" autocomplete="on" id="FY" name="FY" class="inputBoxes" style="display:inline; width : 150px " onmouseover="increaseBorder(this)" onmouseout="decreaseBorder(this)" onfocus="increaseBorder(this)" onblur="decreaseBorder(this)" /> 
 					
 							<div style="height:14px;">
 									<br>
